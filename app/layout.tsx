@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | OCONNOR SMOKE",
   },
   description:
-    "Shop 200+ premium cannabis strains at OCONNOR SMOKE. Exotic, Premium, AAA+, AA & Budget flower from $3/g. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open 24 Hours.",
+    "Shop 200+ premium cannabis strains at OCONNOR SMOKE. Exotic, Premium, AAA+, AA & Budget flower from $3/g. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open Daily: 10:00 AM - 12:00 AM.",
   keywords: [
     "cannabis dispensary GTA",
     "weed store GTA",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "OCONNOR SMOKE",
     title: "OCONNOR SMOKE — Premium GTA Cannabis Dispensary",
     description:
-      "200+ strains from $3/g. Exotic to Budget. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open 24 Hours.",
+      "200+ strains from $3/g. Exotic to Budget. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open Daily: 10:00 AM - 12:00 AM.",
     images: [
       {
         url: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OCONNOR SMOKE — GTA's Uplifting Dispensary",
-    description: "200+ strains from $3/g. Open 24 Hours at 132 O'Connor Dr Unit B, GTA.",
+    description: "200+ strains from $3/g. Open Daily: 10:00 AM - 12:00 AM at 132 O'Connor Dr Unit B, GTA.",
     images: ["https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -75,7 +75,7 @@ const jsonLd = {
   additionalType: "https://schema.org/Store",
   "@id": "https://oconnorsmokecannabis.com",
   name: "OCONNOR SMOKE",
-  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in GTA, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 Hours.",
+  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in GTA, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 12:00 AM.",
   url: "https://oconnorsmokecannabis.com",
   telephone: "+16479241664",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
@@ -94,13 +94,21 @@ const jsonLd = {
     longitude: -79.3832,
   },
   openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
-    },
-  ],
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "10:00",
+    "closes": "00:00"
+  }
+],
   sameAs: [
     "https://oconnorsmokecannabis.com/",
     "https://oconnorsmokecannabis.com/",

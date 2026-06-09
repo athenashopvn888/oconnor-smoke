@@ -128,7 +128,7 @@ export default function PostContent() {
 
         <div className={styles.cta}>
           <p>
-            <strong>OCONNOR SMOKE</strong> — 132 O'Connor Dr Unit B, GTA · Open 24 Hours · (647) 924-1664
+            <strong>OCONNOR SMOKE</strong> — 132 O'Connor Dr Unit B, GTA · Open Daily: 10:00 AM - 12:00 AM · (647) 924-1664
           </p>
           <Link href="/exotic" className={styles.ctaBtn}>Browse Our Menu</Link>
         </div>
