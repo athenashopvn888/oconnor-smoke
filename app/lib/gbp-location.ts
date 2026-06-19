@@ -24,7 +24,7 @@ export const gbpLocation = {
     "Accessories"
   ],
   menuUrl: "/",
-  directionsUrl: "https://oconnorsmokecannabis.com/",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=132%20O%27Connor%20Dr%20Unit%20B%2C%20Toronto%2C%20ON%20M4J%202S4",
   mapEmbedUrl: "https://maps.google.com/maps?q=OCONNOR%20SMOKE%20132%20O%27Connor%20Dr%20Unit%20B%2C%20Toronto%2C%20ON%20M4J%202S4&t=&z=15&ie=UTF8&iwloc=&output=embed",
   latitude: "43.6532",
   longitude: "-79.3832",
