@@ -44,14 +44,6 @@ export default function ContactPage() {
                 <br />
                 <span className={styles.infoMuted}>132 O'Connor Dr Unit B & Nearby Expressway</span>
               </p>
-              <a
-                href="https://oconnorsmokecannabis.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.infoBtn}
-              >
-                Get Directions →
-              </a>
             </div>
 
             {/* Hours */}
@@ -107,16 +99,6 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
-            <iframe
-              src="https://maps.google.com/maps?q=132%20O%27Connor%20Dr%20Unit%20B,+GTA,+ON+M4J%202S4&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="OCONNOR SMOKE — 132 O'Connor Dr Unit B, GTA"
-            ></iframe>
           </div>
         </div>
       </section>

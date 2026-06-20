@@ -130,14 +130,6 @@ export default async function ItemsCategoryPage({
             <p className={styles.visitText}>
               132 O'Connor Dr Unit B, GTA, ON M4J 2S4 · Open Daily: 10:00 AM - 12:00 AM
             </p>
-            <a
-              href="https://oconnorsmokecannabis.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.visitBtn}
-            >
-              📍 Get Directions
-            </a>
           </div>
         </div>
       </section>

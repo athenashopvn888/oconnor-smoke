@@ -110,26 +110,8 @@ export default async function SeoLandingPage({
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Find Us</h2>
             <div className={styles.mapWrap}>
-              <iframe
-                src="https://maps.google.com/maps?q=132%20O%27Connor%20Dr%20Unit%20B,+GTA,+ON+M4J%202S4&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="350"
-                style={{ border: 0, borderRadius: "var(--radius-lg)" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="OCONNOR SMOKE — 132 O'Connor Dr Unit B, GTA"
-              />
             </div>
             <div className={styles.visitBtns}>
-              <a
-                href="https://oconnorsmokecannabis.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.visitBtn}
-              >
-                📍 Get Directions
-              </a>
             </div>
           </div>
 
