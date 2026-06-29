@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://oconnorsmokecannabis.com"),
   title: {
-    default: "OCONNOR SMOKE — Premium Cannabis Dispensary, GTA",
+    default: "OCONNOR SMOKE | O'Connor Dr Dispensary",
     template: "%s | OCONNOR SMOKE",
   },
   description:
-    "Shop 200+ premium cannabis strains at OCONNOR SMOKE. Exotic, Premium, AAA+, AA & Budget flower from $3/g. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open Daily: 10:00 AM - 12:00 AM.",
+    "OCONNOR SMOKE is a cannabis dispensary on O'Connor Dr with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 12:00 AM.",
   keywords: [
     "cannabis dispensary GTA",
     "weed store GTA",
