@@ -25,7 +25,7 @@ export const STORE_BLOG_CONFIG = {
   storeCode: "OSC01",
   storeName: "OCONNOR SMOKE",
   city: "Toronto",
-  domain: "oconnorsmokecannabis.com",
+  domain: "www.oconnorsmokecannabis.com",
   storePath: "/weed-dispensary-toronto",
 };
 

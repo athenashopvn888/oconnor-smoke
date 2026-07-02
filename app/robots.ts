@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://oconnorsmokecannabis.com/sitemap.xml",
+    sitemap: "https://www.oconnorsmokecannabis.com/sitemap.xml",
   };
 }
