@@ -189,17 +189,17 @@ This guide is for adults 19+ who want a simple way to understand O'Connor Smoke 
     relatedLinks: [
       {
         title: "O'Connor Smoke store page",
-        url: "https://oconnorsmoke.com/weed-dispensary-toronto",
+        url: "https://www.oconnorsmokecannabis.com/weed-dispensary-toronto",
         description: "Store-specific page for directions, contact details, and visit planning."
       },
       {
         title: "O'Connor Smoke homepage",
-        url: "https://oconnorsmoke.com/",
+        url: "https://www.oconnorsmokecannabis.com/",
         description: "Store-scoped homepage navigation for adults 19+."
       },
       {
         title: "More O'Connor Smoke guides",
-        url: "https://oconnorsmoke.com/blog",
+        url: "https://www.oconnorsmokecannabis.com/blog",
         description: "Store-scoped blog index for future approved guides."
       }
     ],
