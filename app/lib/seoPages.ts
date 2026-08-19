@@ -44,7 +44,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Serving GTA, Toronto & Mississauga",
-        body: "OCONNOR SMOKE proudly serves customers from across the Greater Toronto Area. Whether you're coming from Weston, Mount Dennis, North GTA, Etobicoke, Mississauga, Brampton, or downtown Toronto, we welcome you. Call us at (647) 924-1664 or visit us at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4.",
+        body: "OCONNOR SMOKE proudly serves customers from across the Greater Toronto Area. Whether you're coming from Weston, Mount Dennis, North GTA, Etobicoke, Mississauga, Brampton, or downtown Toronto, we welcome you. Call us at (437) 780-8378 or visit us at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4.",
       },
     ],
     faqs: [
