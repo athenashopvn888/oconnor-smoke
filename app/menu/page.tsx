@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { allFlowers, allItems } from "../lib/products";
+import styles from "./menu.module.css";
+
+export const metadata: Metadata = {title:"Cannabis Menu in East York",description:"Browse flower, pre-rolls, edibles, vapes, concentrates and accessories at O'Connor Smoke Cannabis in East York.",alternates:{canonical:"https://oconnorsmokecannabis.com/menu/"}};
+const definitions=[["Flower","Five flower tiers","/exotic","FLOWER"],["Pre-Rolls","Singles, packs and infused","/items/prerolls","PREROLLS"],["Concentrates","Hash, shatter and extracts","/items/concentrates","CONCENTRATES"],["Edibles","Gummies, chocolate and drinks","/items/edibles","EDIBLES"],["Vapes","Cartridges and disposables","/items/vape-disposables","VAPE DISPOSABLE"],["Accessories","Add-ons and essentials","/items/add-ons","ADD ONS"]] as const;
+const categories=definitions.map(([name,detail,href,category])=>{const products=category==="FLOWER"?allFlowers:allItems.filter(item=>item.category===category);return{name,detail,href,count:products.length,image:products.find(product=>product.image)?.image}});
+export default function MenuPage(){return <main className={styles.page}><Navbar/><section className={styles.hero}><p>O’Connor Smoke · East York</p><h1>Explore the menu</h1><span>Browse product categories and open an item for details. Listings are filtered from the store’s latest ONHAND feed.</span></section><section className={styles.grid} aria-label="Product categories">{categories.map(category=><Link href={category.href} className={styles.card} key={category.name}><div className={styles.media}>{category.image?<img src={category.image} alt=""/>:<b aria-hidden="true">O</b>}<i/></div><small>{category.count} items</small><div className={styles.copy}><h2>{category.name}</h2><p>{category.detail}</p></div><strong aria-hidden="true">↗</strong></Link>)}</section><section className={styles.tiers}><div><p>Flower tiers</p><h2>Choose your tier</h2></div><nav><Link href="/exotic">Exotic</Link><Link href="/premium">Premium</Link><Link href="/aaa">AAA+</Link><Link href="/aa">AA</Link><Link href="/budget">Budget</Link></nav></section><Footer/></main>}
