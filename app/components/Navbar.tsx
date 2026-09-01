@@ -20,8 +20,6 @@ const ALL_LINKS = [
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
   { href: "/delivery", label: "🚗 Delivery" },
-  { href: "/blog", label: "Guides" },
-  { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
   { href: "/games", label: "🎮" },
 ];
