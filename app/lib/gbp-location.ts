@@ -9,8 +9,8 @@ export const gbpLocation = {
   address: "132 O'Connor Dr Unit B, Toronto, ON M4J 2S4",
   streetAddress: "132 O'Connor Dr Unit B",
   postalCode: "M4J 2S4",
-  phone: "(437) 780-8378",
-  phoneIntl: "+14377808378",
+  phone: "(647) 924-1664",
+  phoneIntl: "+16479241664",
   neighborhood: "O’Connor / East York",
   nearbyAreas: ["O\u2019Connor Drive", "East York", "Woodbine", "St. Clair East", "Victoria Park", "Parkview Hills", "Topham Park", "TTC"],
   products: [

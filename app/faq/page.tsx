@@ -113,7 +113,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(437) 780-8378</strong> or visit us at 132 O'Connor Dr Unit B, GTA.
+              Call us at <strong>(647) 924-1664</strong> or visit us at 132 O'Connor Dr Unit B, GTA.
             </p>
           </div>
         </div>
