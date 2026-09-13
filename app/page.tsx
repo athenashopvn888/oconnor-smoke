@@ -78,7 +78,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is OCONNOR SMOKE located?",
-    a: "We are located at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4. Visit us in person or call us at (437) 780-8378. Free evening street parking is available.",
+    a: "We are located at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4. Visit us in person or call us at (647) 924-1664. Free evening street parking is available.",
   },
   {
     q: "What is the cheapest weed at OCONNOR SMOKE?",

@@ -77,7 +77,7 @@ const jsonLd = {
   name: "OCONNOR SMOKE",
   description: "Cannabis dispensary at 132 O'Connor Dr Unit B in GTA, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 12:00 AM.",
   url: "https://oconnorsmokecannabis.com",
-  telephone: "+14377808378",
+  telephone: "+16479241664",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {
