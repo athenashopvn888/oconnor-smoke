@@ -28,7 +28,7 @@ export const gbpLocation = {
   mapEmbedUrl: "",
   latitude: "43.6532",
   longitude: "-79.3832",
-  hours: ["Open Daily: 10:00 AM - 12:00 AM"],
+  hours: ["Open Daily: 10:00 AM - 3:00 AM"],
   seoTitle: "OCONNOR SMOKE | Weed Dispensary in Toronto",
   metaDescription: "OCONNOR SMOKE is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["O\u2019Connor Drive", "East York", "Woodbine"],
