@@ -201,10 +201,11 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
 {/* -- NAVBAR -- */}
-      <div className="hermesHomepageAnnouncement" data-hermes-change="homepage-banner" role="status" aria-label="Store announcement">
-        CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH
-      </div>
-      <Navbar />
+<div className="hermesHomepageAnnouncement" data-hermes-change="homepage-banner" role="status" aria-label="Store announcement">
+  <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineRed">CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH</span>
+  <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineOrange">EXCLUSIVE SPECIAL PREMIUM GRADE BB FULL & BB LIGHT!</span>
+</div>
+<Navbar />
 
       {/* -- WELCOME BANNER -- */}
       {hasWelcomeBanner && !welcomeBannerError && (
