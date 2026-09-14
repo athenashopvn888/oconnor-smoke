@@ -200,10 +200,10 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
+{/* -- NAVBAR -- */}
       <div className="hermesHomepageAnnouncement" data-hermes-change="homepage-banner" role="status" aria-label="Store announcement">
         CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH
       </div>
-      {/* -- NAVBAR -- */}
       <Navbar />
 
       {/* -- WELCOME BANNER -- */}
