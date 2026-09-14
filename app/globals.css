@@ -442,6 +442,22 @@ button { cursor: pointer; font-family: inherit; }
   text-align: center;
 }
 
+.hermesHomepageAnnouncement:has(> .hermesHomepageAnnouncementLine) { padding: 0; background: transparent; }
+.hermesHomepageAnnouncementLine {
+  width: 100%;
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 0.65rem 1rem;
+  color: #ffffff;
+  font: 900 clamp(1.1rem, 3vw, 1.5rem)/1.2 system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.hermesHomepageAnnouncementLineRed { background: #b91c1c; }
+.hermesHomepageAnnouncementLineOrange { background: #c2410c; }
+
 main:has(> .hermesHomepageAnnouncement) { overflow-x: clip; }
 main:has(> .hermesHomepageAnnouncement) > #main-nav {
   position: sticky;
