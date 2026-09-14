@@ -425,17 +425,25 @@ button { cursor: pointer; font-family: inherit; }
   border: 1px solid var(--border-subtle);
 }
 
-/* Hermes bounded additive homepage announcement */
+/* Hermes bounded existing homepage announcement: RED_LARGE_BOLD */
 .hermesHomepageAnnouncement {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  min-height: 36px;
+  min-height: var(--hermes-homepage-announcement-height);
   display: grid;
   place-items: center;
   box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  background: #111827;
+  padding: 0.65rem 1rem;
+  background: #b91c1c;
   color: #ffffff;
-  font: 800 clamp(0.78rem, 2.5vw, 0.95rem)/1.25 system-ui, sans-serif;
+  font: 900 clamp(1.1rem, 3vw, 1.5rem)/1.2 system-ui, sans-serif;
   letter-spacing: 0.04em;
   text-align: center;
+}
+
+main:has(> .hermesHomepageAnnouncement) { overflow-x: clip; }
+main:has(> .hermesHomepageAnnouncement) > #main-nav {
+  position: sticky;
+  top: 0;
 }
