@@ -14,7 +14,7 @@ export default function Footer() {
             <p className={styles.desc}>
               Your Local Cannabis Dispensary At 132 O'Connor Dr Unit B, GTA. Visit
               OCONNOR SMOKE For Premium Flower, Edibles, Vapes &amp; More.
-              Open: Open Daily: 10:00 AM - 12:00 AM.
+              Open: Open Daily: 10:00 AM - 3:00 AM.
             </p>
             <div className={styles.buttons}>
             </div>
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>Open Daily: 10:00 AM - 12:00 AM</span>
+              <span className={styles.highlight}>Open Daily: 10:00 AM - 3:00 AM</span>
             </div>
           </div>
 
