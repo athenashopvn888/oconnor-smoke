@@ -1,5 +1,3 @@
-/* ── Tier-specific SEO content for below-the-fold sections ── */
-
 export interface TierSeoData {
   seoTitle: string;
   seoIntro: string;
@@ -7,112 +5,77 @@ export interface TierSeoData {
   faqs: { q: string; a: string }[];
 }
 
+const visitNote = "O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. The Google Business Profile currently lists daily hours of 10:00 AM to 2:30 AM. Adults 19+ must bring valid government photo ID.";
+
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
-    seoTitle: "Exotic Cannabis Flower GTA — Ultra-Rare, Top-Shelf Genetics",
-    seoIntro: "Explore the Exotic tier at OCONNOR SMOKE — our most exclusive cannabis flower selection. Hand-picked strains with THC levels up to 39%, stunning bag appeal, and unique terpene profiles you won't find anywhere else in GTA.",
+    seoTitle: "Exotic Weed in East York | O’Connor Smoke Cannabis",
+    seoIntro: "The Exotic Weed page is the top flower tier in the O’Connor Smoke menu structure. It gives East York shoppers one stable place to review current strain names, listed sizes, and posted prices without turning a rotating batch into a permanent availability claim.",
     sections: [
-      {
-        heading: "What Makes Exotic Flower Special?",
-        body: "Exotic cannabis flower represents the absolute pinnacle of cannabis cultivation. These strains are grown by elite craft cultivators, hand-trimmed to perfection, and selected for their exceptional terpene profiles, bag appeal, and potency. At OCONNOR SMOKE, our Exotic tier features strains with THC levels ranging from 35% to 39% — the highest potency flower available in GTA.",
-      },
-      {
-        heading: "Exotic Pricing — $20/g with 3g bundle pricing",
-        body: "Our Exotic flower starts at $20 per gram. With our 3g bundle pricing, you get 3 grams for just $40 — that's $13.33/g. For even better value, our 6g bundle offer gives you 6 grams for $60 — just $10.00/g. 14g is available for $140 ($10/g) and full ounces (28g) for $250 ($8.93/g).",
-      },
-      {
-        heading: "Why Shop Exotic at OCONNOR SMOKE?",
-        body: "OCONNOR SMOKE is located at 132 O'Connor Dr Unit B in the heart of GTA's ByWard Market neighbourhood. Our live digital menu is updated in real time, so you can check exactly what Exotic strains are in stock before you visit. Our knowledgeable budtenders can help you find the perfect strain based on your preferred effects, aroma, and potency level.",
-      },
+      { heading: "How to Read the Exotic Tier", body: "Exotic is used here as a menu grade, not as a medical or guaranteed-potency statement. Compare each current listing by its strain name, labelled type, package details, and any terpene or product notes shown on the page. Rare genetics and distinctive aroma profiles may help describe an individual listing when those details are actually supplied." },
+      { heading: "Current Listings Change", body: "Flower batches rotate. A strain that appears today may be replaced later, while the Exotic Weed category remains the stable browsing URL. Use the live grid for the current selection and call +1 (647) 924-1664 when one strain or size determines your trip." },
+      { heading: "Compare Other Flower Tiers", body: "Premium and AAA+ provide nearby comparison points, while AA and Budget are separate menu grades. Keeping those choices on their own pages makes it easier to compare the current shelf without presenting every flower item as equivalent." },
+      { heading: "East York Store Information", body: visitNote },
     ],
     faqs: [
-      { q: "What is Exotic cannabis flower?", a: "Exotic flower is our top-tier cannabis, featuring ultra-rare genetics with THC levels from 35% to 39%. These strains are hand-selected for exceptional bag appeal, unique terpene profiles, and maximum potency." },
-      { q: "How much does Exotic flower cost?", a: "Exotic flower is $20/g. With our 3g bundle pricing, 3g is just $40. 6g bundle pricing gives you 6g for $60. 14g is $140 and 28g is $250." },
-      { q: "What strains are available in the Exotic tier?", a: "Our Exotic selection rotates frequently. Check our live online menu for the current strains in stock — it updates in real time." },
-      { q: "Is Exotic worth the price?", a: "If you value the highest potency, rarest genetics, and best bag appeal, Exotic is absolutely worth it. Our bundle pricing brings the per-gram price down significantly — as low as $8.93/g for an ounce." },
+      { q: "What does Exotic mean on this menu?", a: "Exotic is the store’s top flower menu tier. Review the current listing for product-specific details." },
+      { q: "Is every Exotic strain always available?", a: "No. Flower batches rotate. Check the current grid and call the store when one item matters." },
     ],
   },
-
   PREMIUM: {
-    seoTitle: "Premium Cannabis Flower GTA — Hand-Picked Connoisseur Grade",
-    seoIntro: "Shop Premium cannabis flower at OCONNOR SMOKE, GTA. Connoisseur-grade strains with THC 32-34%, exceptional flavour, and smooth smoke. Starting at $15/g.",
+    seoTitle: "Premium Weed in East York | O’Connor Smoke Cannabis",
+    seoIntro: "Premium Weed is a distinct flower tier for the O’Connor Drive store in East York. The page combines a stable category explanation with the rotating live grid, allowing adults to compare current names, listed weights, and posted prices in one place.",
     sections: [
-      {
-        heading: "What is Premium Cannabis Flower?",
-        body: "Premium flower sits just below Exotic in our quality hierarchy. These are connoisseur-grade strains with THC levels between 32% and 34%, offering exceptional flavour, smooth smoke, and consistent potency. Premium is the sweet spot for cannabis enthusiasts who want top-quality flower without the Exotic price tag.",
-      },
-      {
-        heading: "Premium Pricing — $15/g with Bundle Pricing",
-        body: "Premium flower starts at $15 per gram. Our 3g bundle pricing gets you 3 grams for $30 ($10/g). The 6g bundle offer delivers 6 grams for just $45 ($7.50/g). 14g is available for $100 ($7.14/g) and 28g for $180 ($6.43/g).",
-      },
-      {
-        heading: "Best Value in ByWard Market",
-        body: "At OCONNOR SMOKE on GTA St, our Premium tier offers the best quality-to-price ratio in the neighbourhood. Every strain in this tier has been personally vetted by our team for potency, flavour, and bag appeal.",
-      },
+      { heading: "What the Premium Page Shows", body: "Use the live cards for the details attached to each current flower listing. Aroma, terpene, cultivation, or genetics language belongs to an individual product only when the source data supports it. The tier name itself is not a medical, effect, or potency guarantee." },
+      { heading: "Plan Around the Current Menu", body: "Products can move in and out of the Premium tier as batches change. The category URL stays useful even when the grid changes. Call +1 (647) 924-1664 before travelling if a particular strain or package size is important." },
+      { heading: "Compare Up or Down the Menu", body: "Exotic is the neighbouring top tier. AAA+, AA, and Budget offer other posted menu grades. Open those pages side by side to compare the current shelf rather than relying on an old search snippet or saved screenshot." },
+      { heading: "East York Store Information", body: visitNote },
     ],
     faqs: [
-      { q: "What is Premium cannabis flower?", a: "Premium is our connoisseur-grade tier featuring strains with THC 32-34%. Hand-picked for exceptional flavour, smooth smoke, and consistent quality." },
-      { q: "How much does Premium flower cost?", a: "Premium starts at $15/g. 3g bundle pricing = $30/3g. 6g bundle pricing = $45/6g. 14g = $100. 28g = $180." },
-      { q: "What's the difference between Exotic and Premium?", a: "Exotic features ultra-rare genetics with THC 35-39%, while Premium offers excellent connoisseur-grade strains at THC 32-34% — still top-shelf, but at a lower price point." },
+      { q: "What is Premium Weed at O’Connor Smoke?", a: "It is one of the store’s five flower menu tiers. Current product details appear in the live grid." },
+      { q: "How do I confirm a Premium listing?", a: "Check the current page and call +1 (647) 924-1664 when one item determines the visit." },
     ],
   },
-
   "AAA+": {
-    seoTitle: "AAA+ Cannabis Flower GTA — Heavy Hitters at Great Prices",
-    seoIntro: "Shop AAA+ cannabis flower at OCONNOR SMOKE, GTA. Strong, reliable strains with THC 30-32% starting at just $10/g. The best value for experienced smokers.",
+    seoTitle: "AAA+ Weed in East York | O’Connor Smoke Cannabis",
+    seoIntro: "AAA+ Weed sits in the middle of the five-tier flower menu at O’Connor Smoke Cannabis. This East York page keeps a clear category identity while the strain grid supplies the current product names, listed formats, and posted prices.",
     sections: [
-      {
-        heading: "What is AAA+ Cannabis Flower?",
-        body: "AAA+ is where potency meets value. These heavy-hitting strains deliver THC levels from 30% to 32%, making them perfect for daily smokers who want solid potency without paying the premium markup. AAA+ flower at OCONNOR SMOKE is sourced from trusted Canadian craft growers.",
-      },
-      {
-        heading: "AAA+ Pricing — $10/g with Bundle Pricing",
-        body: "AAA+ flower starts at just $10 per gram. Our 3g bundle pricing delivers 3 grams for $20 ($6.67/g). The 6g bundle offer gives you 6 grams for $30 — just $5.00/g. 14g is $60 ($4.29/g) and full ounces (28g) start at $100 ($3.57/g).",
-      },
+      { heading: "A Menu Grade, Not a Universal Standard", body: "AAA+ is the store’s menu label for this group of flower. Because grading language can vary between sellers and batches, use the individual listing rather than the tier name alone when comparing product details. The page does not promise a particular effect or medical outcome." },
+      { heading: "Use the Live Grid", body: "Current strains and package sizes can rotate. The grid shows what is presently published for this category, while the surrounding copy explains the page without making stock permanent. Call +1 (647) 924-1664 to confirm one specific item before a special trip." },
+      { heading: "Compare the Full Flower Menu", body: "Premium and Exotic appear above AAA+ in the menu structure. AA and Budget are separate lower-price menu lanes. Each tier has its own page so shoppers can compare the collections without mixing the categories." },
+      { heading: "East York Store Information", body: visitNote },
     ],
     faqs: [
-      { q: "What is AAA+ cannabis flower?", a: "AAA+ is our value-potency tier featuring strains with THC 30-32%. Heavy hitters with proven genetics at unbeatable prices." },
-      { q: "How much does AAA+ flower cost?", a: "AAA+ starts at $10/g. 3g bundle pricing = $20/3g. 6g bundle pricing = $30/6g. 14g = $60. 28g from $100." },
-      { q: "Is AAA+ good quality?", a: "Absolutely. AAA+ strains deliver THC 30-32% with excellent potency and smoke quality. They're the best value-to-potency ratio in our lineup." },
+      { q: "What does AAA+ mean here?", a: "AAA+ is a flower menu tier used by O’Connor Smoke Cannabis. Check each current listing for its own details." },
+      { q: "Are listed strains permanent?", a: "No. Flower batches rotate and current listings can change." },
     ],
   },
-
   AA: {
-    seoTitle: "AA Cannabis Flower GTA — Quality Daily Drivers",
-    seoIntro: "Shop AA cannabis flower at OCONNOR SMOKE, GTA. Solid everyday strains with THC 27-29% at just $5/g. Perfect for regular smokers on a budget.",
+    seoTitle: "AA Weed in East York | O’Connor Smoke Cannabis",
+    seoIntro: "The AA Weed page groups the current AA flower listings for O’Connor Smoke Cannabis in East York. It is built for straightforward comparison: read the strain name, labelled type, available sizes, and posted price on the current card before deciding whether to visit.",
     sections: [
-      {
-        heading: "What is AA Cannabis Flower?",
-        body: "AA flower is designed for the everyday smoker. These quality daily drivers deliver consistent THC levels between 27% and 29%, providing reliable effects at an affordable price. AA is perfect for regular smokers who want quality without overspending.",
-      },
-      {
-        heading: "AA Pricing — $5/g, 5g bundle for $20",
-        body: "AA flower is just $5 per gram. Our 5g bundle for $20 gives you 5 grams total ($4.00/g). 14g is available for $50 ($3.57/g) and 28g for $90 ($3.21/g). Great value for daily use.",
-      },
+      { heading: "How to Compare AA Flower", body: "AA is a store menu grade. It does not, by itself, verify a universal quality, potency, or effect level. Product-specific statements should come from the listing or package, so the stable page copy avoids claims that could become inaccurate when the batch changes." },
+      { heading: "Check Today’s Menu", body: "The page can remain indexed while the flower grid rotates. That separates the lasting East York category from temporary stock. If a particular strain or weight is the reason for the trip, call +1 (647) 924-1664 before leaving." },
+      { heading: "Other Flower Options", body: "Budget is a separate value tier, while AAA+, Premium, and Exotic provide additional menu grades. Use the five collection pages to compare the current shelf instead of assuming that an older listing or search result still applies." },
+      { heading: "East York Store Information", body: visitNote },
     ],
     faqs: [
-      { q: "What is AA cannabis flower?", a: "AA is our everyday-value tier with strains at THC 27-29%. Reliable quality at an affordable price point." },
-      { q: "How much does AA flower cost?", a: "AA starts at $5/g. 5g bundle = $20/5g ($4.00/g). 14g = $50. 28g = $90." },
+      { q: "Is AA a guaranteed potency level?", a: "No. It is a store menu tier. Read the current item and package details for product-specific information." },
+      { q: "Where is the store?", a: "132 O’Connor Dr Unit B, East York, ON M4J 2S4." },
     ],
   },
-
   BUDGET: {
-    seoTitle: "Budget Cannabis GTA — Cheap Weed From $3/g",
-    seoIntro: "Cheap weed in GTA starting at $3/g. OCONNOR SMOKE Budget tier features shreds and value ounces for cost-conscious smokers. Check current store hours before visiting OCONNOR SMOKE.",
+    seoTitle: "Budget Weed in East York | O’Connor Smoke Cannabis",
+    seoIntro: "Budget Weed is the value-focused flower tier for O’Connor Smoke Cannabis on O’Connor Drive. The page gives East York shoppers a stable place to review current Budget strain names, listed weights, and posted prices without presenting a rotating menu as permanent stock.",
     sections: [
-      {
-        heading: "Affordable Cannabis Without Compromise",
-        body: "Our Budget tier proves that affordable cannabis doesn't mean low quality. With THC levels from 24% to 27%, these value strains deliver solid effects at rock-bottom prices. Whether you're looking for shreds or value ounces, OCONNOR SMOKE has the cheapest weed in GTA's ByWard Market neighbourhood.",
-      },
-      {
-        heading: "Budget Pricing — From $3/g, OZs from $40",
-        body: "Budget flower starts at just $3 per gram. Value ounces start from $40 — some of the best prices you'll find in GTA. Our 3g bundle pricing applies here too, giving you even more savings.",
-      },
+      { heading: "Start With the Current Cards", body: "Budget is a price-oriented menu lane, not a medical or effect claim. Read each current card for its strain name, labelled type, size choices, and posted price. Those details can change with a new batch, while the category page continues to explain how the tier works." },
+      { heading: "Confirm Before a Special Trip", body: "Use the live grid for current listings and call +1 (647) 924-1664 when one strain, weight, or price determines your visit. Search snippets and saved screenshots may lag behind the published menu." },
+      { heading: "Compare the Five Tiers", body: "AA is the next menu grade, followed by AAA+, Premium, and Exotic. Keeping each tier separate makes the menu easier to scan and avoids mixing temporary product information into permanent local store copy." },
+      { heading: "East York Store Information", body: visitNote },
     ],
     faqs: [
-      { q: "What is the cheapest weed at OCONNOR SMOKE?", a: "Our Budget tier starts at $3/g with value ounces from $40. These are quality strains at the lowest possible price." },
-      { q: "Is budget flower still good quality?", a: "Yes! Budget strains still deliver THC 24-27%. They're perfect for daily smokers who want value without sacrificing potency." },
-      { q: "Do you have shreds?", a: "Yes, our Budget tier includes shredded flower options — great for rolling and value pricing." },
+      { q: "What is the Budget Weed page?", a: "It is the value-focused flower collection for O’Connor Smoke Cannabis. Current items appear in the grid." },
+      { q: "Can the listings change?", a: "Yes. Flower batches, sizes, and posted prices can rotate." },
     ],
   },
 };

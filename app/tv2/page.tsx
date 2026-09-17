@@ -134,9 +134,9 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 
 /* -- TICKER -- */
 const TICKER_SLIDES = [
-  "🔥 OCONNOR SMOKE — 132 O'Connor Dr Unit B, GTA",
+  "🔥 OCONNOR SMOKE — 132 O'Connor Dr Unit B, East York",
   "200+ Strains In Stock",
-  "Open Daily: 10:00 AM - 3:00 AM",
+  "Open Daily: 10:00 AM - 2:30 AM",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at oconnorsmokecannabis.com/games",

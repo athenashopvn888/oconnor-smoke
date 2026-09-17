@@ -9,44 +9,44 @@ export const metadata: Metadata = {
     template: "%s | OCONNOR SMOKE",
   },
   description:
-    "OCONNOR SMOKE is a cannabis dispensary on O'Connor Dr with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 3:00 AM.",
+    "OCONNOR SMOKE is a cannabis dispensary on O'Connor Dr with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 2:30 AM.",
   keywords: [
-    "cannabis dispensary GTA",
-    "weed store GTA",
-    "exotic flower GTA",
+    "cannabis dispensary East York",
+    "weed store East York",
+    "exotic flower East York",
     "premium cannabis",
     "OCONNOR SMOKE",
-    "cheap weed GTA",
+    "cheap weed East York",
     "dispensary near me",
     "THC flower",
     "indica sativa hybrid",
-    "edibles GTA",
+    "edibles East York",
     "vapes",
     "pre-rolls",
-    "native cigarettes GTA",
-    "weed store Mississauga",
+    "native cigarettes East York",
+    "O'Connor Drive cannabis",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://oconnorsmokecannabis.com",
     siteName: "OCONNOR SMOKE",
-    title: "OCONNOR SMOKE — Premium GTA Cannabis Dispensary",
+    title: "East York Dispensary on O’Connor Dr | O’Connor Smoke Cannabis",
     description:
-      "200+ strains from $3/g. Exotic to Budget. GTA's uplifting dispensary at 132 O'Connor Dr Unit B. Open Daily: 10:00 AM - 3:00 AM.",
+      "Walk-in East York cannabis store at 132 O'Connor Dr Unit B. Serving Danforth, Woodbine, and Don Mills. Adults 19+.",
     images: [
       {
         url: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
-        alt: "OCONNOR SMOKE — Premium Cannabis Dispensary GTA",
+        alt: "OCONNOR SMOKE — Premium Cannabis Dispensary East York",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OCONNOR SMOKE — GTA's Uplifting Dispensary",
-    description: "200+ strains from $3/g. Open Daily: 10:00 AM - 3:00 AM at 132 O'Connor Dr Unit B, GTA.",
+    title: "O’Connor Smoke Cannabis — East York",
+    description: "Walk-in East York cannabis store at 132 O'Connor Dr Unit B. Open daily 10:00 AM to 2:30 AM. Adults 19+.",
     images: ["https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -71,11 +71,10 @@ export const metadata: Metadata = {
 /* ── JSON-LD Structured Data ── */
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Store",
-  additionalType: "https://schema.org/Store",
-  "@id": "https://oconnorsmokecannabis.com",
-  name: "OCONNOR SMOKE",
-  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in GTA, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 3:00 AM.",
+  "@type": "CannabisStore",
+  "@id": "https://oconnorsmokecannabis.com/#store",
+  name: "O'Connor Smoke Cannabis",
+  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in East York, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 2:30 AM.",
   url: "https://oconnorsmokecannabis.com",
   telephone: "+16479241664",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
@@ -83,7 +82,7 @@ const jsonLd = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "132 O'Connor Dr Unit B",
-    addressLocality: "GTA",
+    addressLocality: "East York",
     addressRegion: "ON",
     postalCode: "M4J 2S4",
     addressCountry: "CA",
@@ -106,18 +105,19 @@ const jsonLd = {
       "Sunday"
     ],
     "opens": "10:00",
-    "closes": "03:00"
+    "closes": "02:30"
   }
 ],
-  sameAs: [
-    "https://oconnorsmokecannabis.com/",
-    "https://oconnorsmokecannabis.com/",
-  ],
-  hasMap: "https://oconnorsmokecannabis.com/",
-  areaServed: {
-    "@type": "City",
-    name: "GTA",
-  },
+  areaServed: ["East York", "Danforth", "Woodbine", "Don Mills"],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://oconnorsmokecannabis.com/#website",
+  name: "O'Connor Smoke Cannabis",
+  url: "https://oconnorsmokecannabis.com",
+  publisher: { "@id": "https://oconnorsmokecannabis.com/#store" },
 };
 
 export default function RootLayout({
@@ -129,7 +129,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="GTA" />
+        <meta name="geo.placename" content="East York" />
         <meta name="geo.position" content="43.6532;-79.3832" />
         <meta name="ICBM" content="43.6532, -79.3832" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -141,6 +141,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYMC137Q0V"></script>
         <script

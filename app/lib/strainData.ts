@@ -58,7 +58,7 @@ export function getStrainData(
       : type === "sativa"
       ? "an uplifting cerebral buzz and creative energy ideal for daytime use"
       : "a balanced experience combining physical relaxation with mental clarity"
-  }. Available in-store at OCONNOR SMOKE, GTA.`;
+  }. Available in-store at OCONNOR SMOKE, East York.`;
 
   const metaDescription = `${name} - ${tierDesc} ${typeLabel}${
     thc ? ` at ${thc} THC` : ""
@@ -68,7 +68,7 @@ export function getStrainData(
       : type === "sativa"
       ? "Uplifting cerebral buzz."
       : "Balanced hybrid effects."
-  } Walk-in welcome at OCONNOR SMOKE GTA. Real-time stock.`;
+  } Walk-in welcome at OCONNOR SMOKE East York. Real-time stock.`;
 
   return { effects, description, metaDescription };
 }

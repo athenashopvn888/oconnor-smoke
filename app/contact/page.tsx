@@ -4,16 +4,16 @@ import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us — OCONNOR SMOKE | 132 O'Connor Dr Unit B, GTA",
+  title: "Contact Us — OCONNOR SMOKE | 132 O'Connor Dr Unit B, East York",
   description:
-    "Visit OCONNOR SMOKE at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4. We are open daily from 10:00 AM to 3:00 AM. Walk-ins welcome.",
+    "Visit OCONNOR SMOKE at 132 O'Connor Dr Unit B, East York, ON M4J 2S4. We are open daily from 10:00 AM to 2:30 AM. Walk-ins welcome.",
   alternates: {
     canonical: "https://oconnorsmokecannabis.com/contact",
   },
   openGraph: {
-    title: "Contact OCONNOR SMOKE — GTA Dispensary",
+    title: "Contact OCONNOR SMOKE — East York Dispensary",
     description:
-      "132 O'Connor Dr Unit B, GTA. We are open daily from 10:00 AM to 3:00 AM. Premium cannabis, always fire.",
+      "132 O'Connor Dr Unit B, East York. We are open daily from 10:00 AM to 2:30 AM. Premium cannabis, always fire.",
   },
 };
 
@@ -40,9 +40,9 @@ export default function ContactPage() {
               <p className={styles.infoText}>
                 132 O'Connor Dr Unit B
                 <br />
-                GTA, ON M4J 2S4
+                East York, ON M4J 2S4
                 <br />
-                <span className={styles.infoMuted}>132 O'Connor Dr Unit B & Nearby Expressway</span>
+                <span className={styles.infoMuted}>O’Connor Drive, East York</span>
               </p>
             </div>
 
@@ -51,17 +51,17 @@ export default function ContactPage() {
               <div className={styles.infoIcon}>🕒</div>
               <h2 className={styles.infoTitle}>Hours</h2>
               <div className={styles.hoursTable}>
-                <div className={styles.hoursRow}><span>Monday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Tuesday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Wednesday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Thursday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Friday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Saturday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
-                <div className={styles.hoursRow}><span>Sunday</span><span className={styles.hoursTime}>10:00 AM - 3:00 AM</span></div>
+                <div className={styles.hoursRow}><span>Monday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Tuesday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Wednesday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Thursday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Friday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Saturday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
+                <div className={styles.hoursRow}><span>Sunday</span><span className={styles.hoursTime}>10:00 AM - 2:30 AM</span></div>
               </div>
               <div className={styles.openBadge}>
                 <div className={styles.openDot} />
-                Open Daily: 10:00 AM - 3:00 AM
+                Open Daily: 10:00 AM - 2:30 AM
               </div>
             </div>
 
