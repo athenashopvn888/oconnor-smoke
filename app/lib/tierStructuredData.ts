@@ -1,6 +1,6 @@
 import type { FlowerProduct } from "./products";
 
-const SITE_ORIGIN = "https://oconnorsmokecannabis.com";
+const SITE_ORIGIN = "https://www.oconnorsmokecannabis.com";
 
 export function buildTierCollectionJsonLd({ canonicalPath, name, description, flowers }: {
   canonicalPath: string;

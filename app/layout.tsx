@@ -3,7 +3,7 @@ import "./globals.css";
 import AgeGate from "./components/AgeGate";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://oconnorsmokecannabis.com"),
+  metadataBase: new URL("https://www.oconnorsmokecannabis.com"),
   title: {
     default: "OCONNOR SMOKE | O'Connor Dr Dispensary",
     template: "%s | OCONNOR SMOKE",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://oconnorsmokecannabis.com",
+    url: "https://www.oconnorsmokecannabis.com",
     siteName: "OCONNOR SMOKE",
     title: "East York Dispensary on O’Connor Dr | O’Connor Smoke Cannabis",
     description:
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://oconnorsmokecannabis.com",
+    canonical: "https://www.oconnorsmokecannabis.com",
   },
   verification: {
     // google: "your-google-verification-code",
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CannabisStore",
-  "@id": "https://oconnorsmokecannabis.com/#store",
+  "@id": "https://www.oconnorsmokecannabis.com/#store",
   name: "O'Connor Smoke Cannabis",
   description: "Cannabis dispensary at 132 O'Connor Dr Unit B in East York, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 2:30 AM.",
-  url: "https://oconnorsmokecannabis.com",
+  url: "https://www.oconnorsmokecannabis.com",
   telephone: "+16479241664",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
@@ -114,10 +114,10 @@ const jsonLd = {
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://oconnorsmokecannabis.com/#website",
+  "@id": "https://www.oconnorsmokecannabis.com/#website",
   name: "O'Connor Smoke Cannabis",
-  url: "https://oconnorsmokecannabis.com",
-  publisher: { "@id": "https://oconnorsmokecannabis.com/#store" },
+  url: "https://www.oconnorsmokecannabis.com",
+  publisher: { "@id": "https://www.oconnorsmokecannabis.com/#store" },
 };
 
 export default function RootLayout({

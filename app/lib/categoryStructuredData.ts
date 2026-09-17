@@ -1,4 +1,4 @@
-const SITE_ORIGIN = "https://oconnorsmokecannabis.com";
+const SITE_ORIGIN = "https://www.oconnorsmokecannabis.com";
 
 export function buildCategoryCollectionJsonLd({ canonicalPath, name, description, items }: { canonicalPath: string; name: string; description: string; items: Array<{ name: string; slug: string }> }) {
   const url = `${SITE_ORIGIN}${canonicalPath}`;

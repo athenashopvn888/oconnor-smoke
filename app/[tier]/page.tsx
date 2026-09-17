@@ -37,7 +37,7 @@ export async function generateMetadata({
     title: seo?.seoTitle || `${tierInfo.config.name} Cannabis Flower — ${flowers.length} Strains`,
     description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at OCONNOR SMOKE.`,
     alternates: {
-      canonical: `https://oconnorsmokecannabis.com/${tierSlug}`,
+      canonical: `https://www.oconnorsmokecannabis.com/${tierSlug}`,
     },
     openGraph: {
       title: `${tierInfo.config.name} Flower | OCONNOR SMOKE`,
