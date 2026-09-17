@@ -36,7 +36,7 @@ export default function DeliveryContent() {
           Delivery <span className={styles.highlight}>Coming Soon</span>
         </h1>
         <p className={styles.pageSubtitle}>
-          OCONNOR SMOKE is launching delivery across GTA.
+          OCONNOR SMOKE is launching delivery across East York.
           Sign up below to be the first to know when we go live — and get an exclusive launch-day deal.
         </p>
 
@@ -100,8 +100,8 @@ export default function DeliveryContent() {
         {/* CTA */}
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
-            Can&apos;t wait? Visit us in-store at <strong>132 O'Connor Dr Unit B, GTA</strong> —
-            we are <strong>Open Daily: 10:00 AM - 3:00 AM</strong>. Call <strong>(647) 924-1664</strong>.
+            Can&apos;t wait? Visit us in-store at <strong>132 O'Connor Dr Unit B, East York</strong> —
+            we are <strong>Open Daily: 10:00 AM - 2:30 AM</strong>. Call <strong>(647) 924-1664</strong>.
           </p>
         </div>
       </div>

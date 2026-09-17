@@ -72,7 +72,7 @@ export default function GamesContent() {
             }}
           >
             Kill time while your order&apos;s ready. Beat the high score. No
-            dispensary in GTA has this.
+            dispensary in East York has this.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -66,23 +66,23 @@ const EXPLORE_CATEGORIES = [
   { name: "Games Arcade", slug: "games", banner: "/banners/10_Games.webp" },
 ];
 
-/* -- Local FAQs for Jane St -- */
+/* -- Local FAQs for O'Connor Drive -- */
 const LOCAL_FAQS = [
   {
     q: "What are the hours for OCONNOR SMOKE?",
-    a: "OCONNOR SMOKE at 132 O'Connor Dr Unit B, GTA is open daily from 10:00 AM to 3:00 AM. Walk in anytime - no appointment needed.",
+    a: "OCONNOR SMOKE at 132 O'Connor Dr Unit B, East York is open daily from 10:00 AM to 2:30 AM. Walk in anytime - no appointment needed.",
   },
   {
     q: "What cannabis products do you carry?",
-    a: "We carry five tiers of premium flower: Exotic ($10-$12/g), Premium ($7-$10/g), AAA+ ($5-$6/g), AA ($4/g), and Budget ($3/g), plus a wide variety of edibles, prerolls, vapes, and concentrates.",
+    a: "The current menu organizes flower into Exotic, Premium, AAA+, AA, and Budget tiers and separately lists edibles, pre-rolls, vapes, and concentrates.",
   },
   {
     q: "Where is OCONNOR SMOKE located?",
-    a: "We are located at 132 O'Connor Dr Unit B, GTA, ON M4J 2S4. Visit us in person or call us at (647) 924-1664. Free evening street parking is available.",
+    a: "We are located at 132 O'Connor Dr Unit B, East York, ON M4J 2S4. Visit us in person or call us at (647) 924-1664.",
   },
   {
-    q: "What is the cheapest weed at OCONNOR SMOKE?",
-    a: "Our budget flower starts at just $3/g. We also offer AA daily drivers from $4/g and AAA+ heavy hitters from $5-$6/g. View our budget menu for our latest deals.",
+    q: "Where should I check current flower pricing?",
+    a: "Use the current Budget, AA, AAA+, Premium, and Exotic tier pages. Posted items and prices can change.",
   },
 ];
 
@@ -213,7 +213,7 @@ export default function HomePage() {
           <div className={styles.welcomeBannerContainer}>
             <img
               src={welcomeBannerSrc}
-              alt="Welcome to OCONNOR SMOKE - Premium GTA Cannabis Dispensary"
+              alt="Welcome to OCONNOR SMOKE - Premium East York Cannabis Dispensary"
               className={styles.welcomeBannerImg}
               onError={() => setWelcomeBannerError(true)}
             />
@@ -233,7 +233,7 @@ export default function HomePage() {
             <img src="/storeFavicon.webp" alt="OCONNOR SMOKE Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>OCONNOR SMOKE</h1>
             <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
-            <div className={styles.brandBadge}>Open Daily: 10:00 AM - 3:00 AM</div>
+            <div className={styles.brandBadge}>Open Daily: 10:00 AM - 2:30 AM</div>
           </div>
 
           {/* Bento Grid */}
@@ -316,15 +316,15 @@ export default function HomePage() {
       <section className={styles.seoSection}>
         <div className={styles.container}>
           <div className={styles.seoPanel}>
-            <h2 className={styles.seoPanelTitle}>132 O'Connor Dr Unit B & Nearby Expressway's Premier Cannabis Dispensary - Open Daily: 10:00 AM - 3:00 AM</h2>
+            <h2 className={styles.seoPanelTitle}>East York Weed Dispensary at 132 O'Connor Drive</h2>
             <p className={styles.seoPanelText}>
-              Welcome to <strong>OCONNOR SMOKE</strong>, GTA's premier cannabis destination at 132 O'Connor Dr Unit B. We carry an electrifying selection of top-shelf strains - from ultra-rare exotics to solid everyday budget picks.
+              <strong>O’Connor Smoke Cannabis</strong> is the East York walk-in dispensary at 132 O’Connor Drive, Unit B. The store serves East York, the Danforth, Woodbine, Pape-to-Coxwell side streets, and shoppers coming from the DVP and Don Mills edge.
             </p>
             <p className={styles.seoPanelText}>
-              We are open Open Daily: 10:00 AM - 3:00 AM - OCONNOR SMOKE is here to serve you. Our live menu is constantly refreshed with the freshest drops, premium prerolls, artisan edibles, and everything in between. Whether you're winding down or stocking up for the weekend, our knowledgeable staff can help during listed store hours.
+              Hours follow the Google Business Profile: 10:00 AM to 2:30 AM daily. Adults 19+ with valid government photo ID can review flower tiers and format categories on the current menu before visiting.
             </p>
             <p className={styles.seoPanelText}>
-              Searching for a cannabis dispensary in GTA or the surrounding area? OCONNOR SMOKE is your go-to destination for premium flower, potent prerolls, and artisan edibles. Our six-tier pricing system means quality cannabis at every budget level - starting from just $3/g.
+              Call +1 (647) 924-1664 if you are coming from the Beaches or Scarborough and need one posted item. Product listings and prices can change, so the current menu is the planning source.
             </p>
           </div>
         </div>
@@ -412,7 +412,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 132 O'Connor Dr Unit B
                 <br />
-                GTA, ON M4J 2S4
+                East York, ON M4J 2S4
                 <br />
               </p>
             </div>
@@ -421,7 +421,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 Open 7 Days a Week
                 <br />
-                <span className={styles.storeHighlight}>Open Daily: 10:00 AM - 3:00 AM</span>
+                <span className={styles.storeHighlight}>Open Daily: 10:00 AM - 2:30 AM</span>
               </p>
             </div>
             <div className={styles.storeCard}>
@@ -429,7 +429,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 No appointment needed
                 <br />
-                <span className={styles.storeHighlight}>132 O'Connor Dr Unit B & Nearby Expressway, GTA</span>
+                <span className={styles.storeHighlight}>132 O'Connor Dr Unit B, East York</span>
               </p>
             </div>
           </div>

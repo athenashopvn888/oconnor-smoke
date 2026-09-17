@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import Navbar from "../components/Navbar";
@@ -11,6 +12,8 @@ import {
   TIER_CONFIG,
 } from "../lib/products";
 import { TIER_SEO } from "../lib/tierSeoContent";
+import { buildTierCollectionJsonLd } from "../lib/tierStructuredData";
+import seoContent from "../lib/seoContent.generated.json";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -56,10 +59,19 @@ export default async function TierPage({
   const flowers = getFlowersByTier(tierInfo.key);
   const { config } = tierInfo;
   const seo = TIER_SEO[tierInfo.key];
+  const flowerCopy = seoContent.flowerTiers;
+  const tierLinks = Object.values(TIER_CONFIG);
 
   const saleFlowers = flowers.filter((f) => f.isSale);
   const regularFlowers = flowers.filter((f) => !f.isSale);
   const hotFlowers = flowers.filter((f) => f.isHot);
+  const displayFlowers = [...saleFlowers, ...regularFlowers];
+  const tierJsonLd = buildTierCollectionJsonLd({
+    canonicalPath: `/${tierSlug}`,
+    name: seo?.seoTitle || config.name,
+    description: seo?.seoIntro || `${config.name} cannabis flower at O'Connor Smoke Cannabis in East York.`,
+    flowers: displayFlowers,
+  });
 
   // Check if banner file exists in the public folder
   const bannerExists = config.banner
@@ -67,6 +79,8 @@ export default async function TierPage({
     : false;
 
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tierJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
 
@@ -193,6 +207,15 @@ export default async function TierPage({
               </div>
             ))}
 
+            <div className={styles.seoBlock}>
+              <h3 className={styles.seoHeading}>{config.name} at O'Connor Smoke Cannabis</h3>
+              {flowerCopy.paragraphs.map((paragraph) => <p key={paragraph} className={styles.seoBody}>{paragraph}</p>)}
+              <p className={styles.seoBody}>{flowerCopy.links.map((label, index) => {
+                const destination = tierLinks[index]?.slug || tierSlug;
+                return <span key={label}>{index ? " · " : ""}<Link href={`/${destination}`}>{label}</Link></span>;
+              })}</p>
+            </div>
+
             {/* FAQ Accordion */}
             {seo.faqs.length > 0 && (
               <div className={styles.faqSection}>
@@ -211,5 +234,6 @@ export default async function TierPage({
 
       <Footer />
     </main>
+    </>
   );
 }

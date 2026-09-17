@@ -26,7 +26,7 @@ export async function generateMetadata({
   const itemData = getItemData(item.category, item.name);
 
   return {
-    title: `${item.name} | ${item.category} | OCONNOR SMOKE GTA`,
+    title: `${item.name} | ${item.category} | OCONNOR SMOKE East York`,
     description: itemData.metaDescription,
     alternates: {
       canonical: `https://oconnorsmokecannabis.com/item/${slug}`,

@@ -12,9 +12,9 @@ export default function Footer() {
               OCONNOR SMOKE
             </div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 132 O'Connor Dr Unit B, GTA. Visit
+              Your Local Cannabis Dispensary At 132 O'Connor Dr Unit B, East York. Visit
               OCONNOR SMOKE For Premium Flower, Edibles, Vapes &amp; More.
-              Open: Open Daily: 10:00 AM - 3:00 AM.
+              Open: Open Daily: 10:00 AM - 2:30 AM.
             </p>
             <div className={styles.buttons}>
             </div>
@@ -26,7 +26,7 @@ export default function Footer() {
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address:</span>
               <span>132 O'Connor Dr Unit B</span>
-              <span>GTA, ON M4J 2S4</span>
+              <span>East York, ON M4J 2S4</span>
               <span>Canada</span>
             </div>
             <div className={styles.infoBlock}>
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>Open Daily: 10:00 AM - 3:00 AM</span>
+              <span className={styles.highlight}>Open Daily: 10:00 AM - 2:30 AM</span>
             </div>
           </div>
 
@@ -55,11 +55,12 @@ export default function Footer() {
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">Delivery (Coming Soon)</Link>
               <Link href="/games">Games Arcade</Link>
-              <Link href="/info/york-weed-dispensary">GTA Dispensary</Link>
-              <Link href="/info/cheap-weed-york">Cheap Weed GTA</Link>
+              <Link href="/info/york-weed-dispensary">East York Dispensary</Link>
+              <Link href="/info/cheap-weed-york">Cheap Weed East York</Link>
               <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
-              <Link href="/weed-dispensary-toronto/">OCONNOR SMOKE Weed Dispensary in Toronto</Link>
+              <Link href="/weed-delivery-east-york">East York Delivery</Link>
+              <Link href="/weed-delivery-scarborough">Scarborough Delivery</Link>
+              <Link href="/weed-dispensary-east-york">East York Walk-In Store</Link>
               <Link href="/contact">Contact Us</Link>
               <a
                 href="https://oconnorsmokecannabis.com/"
