@@ -27,7 +27,7 @@ const FAQ_CATEGORIES = [
     title: "🌿 Products & Menu",
     faqs: [
       { q: "What products do you carry?", a: "The current menu separates flower into five tiers and also lists edibles, vapes, concentrates, pre-rolls, cigarettes, and accessories. Current listings can change." },
-      { q: "Where can I check the current menu?", a: "Use the category and tier pages on oconnorsmokecannabis.com, then call (647) 924-1664 when one item determines the trip." },
+      { q: "Where can I check the current menu?", a: "Use the category and tier pages on oconnorsmokecannabis.com, then call (437) 780-8378 when one item determines the trip." },
       { q: "What are your flower tiers?", a: "Exotic ($10-$12/g, THC 35-39%) — ultra-rare top-shelf genetics. Premium ($7-$10/g, THC 32-34%) — connoisseur-grade. AAA+ ($5-$6/g, THC 30-32%) — heavy hitters, our most popular tier. AA ($4/g, THC 27-29%) — quality daily drivers. Budget ($3/g, THC 24-27%) — reliable value flower." },
       { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our live menu for current availability." },
       { q: "Do you sell vapes?", a: "Yes — both disposable vapes and refillable vape pens. We carry both nicotine vapes and THC vapes from top brands." },
@@ -113,7 +113,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(647) 924-1664</strong> or visit us at 132 O'Connor Dr Unit B, East York.
+              Call us at <strong>(437) 780-8378</strong> or visit us at 132 O'Connor Dr Unit B, East York.
             </p>
           </div>
         </div>

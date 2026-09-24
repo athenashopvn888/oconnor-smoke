@@ -76,7 +76,7 @@ const jsonLd = {
   name: "O'Connor Smoke Cannabis",
   description: "Cannabis dispensary at 132 O'Connor Dr Unit B in East York, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 2:30 AM.",
   url: "https://www.oconnorsmokecannabis.com",
-  telephone: "+16479241664",
+  telephone: "+14377808378",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
   priceRange: "$3 - $12/g",
   address: {

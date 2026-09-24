@@ -78,7 +78,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is OCONNOR SMOKE located?",
-    a: "We are located at 132 O'Connor Dr Unit B, East York, ON M4J 2S4. Visit us in person or call us at (647) 924-1664.",
+    a: "We are located at 132 O'Connor Dr Unit B, East York, ON M4J 2S4. Visit us in person or call us at (437) 780-8378.",
   },
   {
     q: "Where should I check current flower pricing?",
@@ -324,7 +324,7 @@ export default function HomePage() {
               Hours follow the Google Business Profile: 10:00 AM to 2:30 AM daily. Adults 19+ with valid government photo ID can review flower tiers and format categories on the current menu before visiting.
             </p>
             <p className={styles.seoPanelText}>
-              Call +1 (647) 924-1664 if you are coming from the Beaches or Scarborough and need one posted item. Product listings and prices can change, so the current menu is the planning source.
+              Call +1 (437) 780-8378 if you are coming from the Beaches or Scarborough and need one posted item. Product listings and prices can change, so the current menu is the planning source.
             </p>
           </div>
         </div>
