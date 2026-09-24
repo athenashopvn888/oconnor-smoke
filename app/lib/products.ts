@@ -162,10 +162,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
     seoTitle: "Cannabis Edibles East York — Gummies, Chocolates & Drinks",
     seoIntro: "Browse current edible listings for the O’Connor Drive store in East York. Compare product names, package details, and posted prices before visiting.",
-    seoDescription: "The Edibles page keeps the current listings for O’Connor Smoke Cannabis together without turning a rotating menu into a permanent stock promise. Adults can compare the product name, package information, listed strength, and posted price shown on each current card. Formats and brands can change, so use the live grid rather than an older search result. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Call +1 (647) 924-1664 when one particular edible is the reason for your trip. Adults 19+ must bring valid government photo ID. Product information is for menu comparison and is not medical advice.",
+    seoDescription: "The Edibles page keeps the current listings for O’Connor Smoke Cannabis together without turning a rotating menu into a permanent stock promise. Adults can compare the product name, package information, listed strength, and posted price shown on each current card. Formats and brands can change, so use the live grid rather than an older search result. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Call +1 (437) 780-8378 when one particular edible is the reason for your trip. Adults 19+ must bring valid government photo ID. Product information is for menu comparison and is not medical advice.",
     faqs: [
       { q: "Where can I review current edible listings?", a: "Use the live grid on this page. Product names, package details, and posted prices can change." },
-      { q: "How do I confirm one edible before visiting?", a: "Call +1 (647) 924-1664 when one particular listing determines your trip." },
+      { q: "How do I confirm one edible before visiting?", a: "Call +1 (437) 780-8378 when one particular listing determines your trip." },
     ],
   },
   "VAPE PENS": {
@@ -173,10 +173,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
     seoTitle: "THC Vape Menu in East York | O’Connor Smoke Cannabis",
     seoIntro: "Review current THC vape listings for O’Connor Smoke Cannabis in East York. Nicotine vapes remain in a separate category.",
-    seoDescription: "The THC Vape page is separate from the Nic Vape page so adults can tell the two categories apart before visiting O’Connor Smoke Cannabis. Use the current grid to compare the listed product name, format, package details, and posted price. The menu can rotate, and the page does not promise that an older listing remains available. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Call +1 (647) 924-1664 if one particular THC vape determines the trip. Adults 19+ must bring valid government photo ID. Product information is for category browsing and is not medical advice.",
+    seoDescription: "The THC Vape page is separate from the Nic Vape page so adults can tell the two categories apart before visiting O’Connor Smoke Cannabis. Use the current grid to compare the listed product name, format, package details, and posted price. The menu can rotate, and the page does not promise that an older listing remains available. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Call +1 (437) 780-8378 if one particular THC vape determines the trip. Adults 19+ must bring valid government photo ID. Product information is for category browsing and is not medical advice.",
     faqs: [
       { q: "Is this the nicotine vape page?", a: "No. THC Vape and Nic Vape are separate menu categories." },
-      { q: "How do I confirm a current listing?", a: "Use the live grid and call +1 (647) 924-1664 when one item matters." },
+      { q: "How do I confirm a current listing?", a: "Use the live grid and call +1 (437) 780-8378 when one item matters." },
     ],
   },
   "VAPE DISPOSABLE": {
@@ -195,10 +195,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "💎",
     seoTitle: "Cannabis Concentrates in East York | O’Connor Smoke",
     seoIntro: "Compare current concentrate listings for the O’Connor Drive store in East York. Review the exact product card before visiting.",
-    seoDescription: "The Concentrates page groups the current listings published for O’Connor Smoke Cannabis in East York. Adults can compare the product name, format, package details, listed strength, and posted price shown on each card without treating the category copy as an inventory promise. Concentrate formats can differ, and the grid can change when the menu changes. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Use the live page for current details and call +1 (647) 924-1664 when one particular listing determines your trip. Adults 19+ must bring valid government photo ID. Staff can clarify the posted label; this page does not provide medical advice.",
+    seoDescription: "The Concentrates page groups the current listings published for O’Connor Smoke Cannabis in East York. Adults can compare the product name, format, package details, listed strength, and posted price shown on each card without treating the category copy as an inventory promise. Concentrate formats can differ, and the grid can change when the menu changes. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. Use the live page for current details and call +1 (437) 780-8378 when one particular listing determines your trip. Adults 19+ must bring valid government photo ID. Staff can clarify the posted label; this page does not provide medical advice.",
     faqs: [
       { q: "Where can I see current concentrate listings?", a: "Use the live grid on this page. Formats and product details can change." },
-      { q: "How do I confirm one item?", a: "Call +1 (647) 924-1664 when a particular listing determines your visit." },
+      { q: "How do I confirm one item?", a: "Call +1 (437) 780-8378 when a particular listing determines your visit." },
     ],
   },
   PREROLLS: {
