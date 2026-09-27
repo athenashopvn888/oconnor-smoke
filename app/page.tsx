@@ -70,7 +70,7 @@ const EXPLORE_CATEGORIES = [
 const LOCAL_FAQS = [
   {
     q: "What are the hours for OCONNOR SMOKE?",
-    a: "OCONNOR SMOKE at 132 O'Connor Dr Unit B, East York is open daily from 10:00 AM to 2:30 AM. Walk in anytime - no appointment needed.",
+    a: "OCONNOR SMOKE at 132 O'Connor Dr Unit B, East York is open 24 hours daily. Walk in anytime - no appointment needed.",
   },
   {
     q: "What cannabis products do you carry?",
@@ -233,7 +233,7 @@ export default function HomePage() {
             <img src="/storeFavicon.webp" alt="OCONNOR SMOKE Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>OCONNOR SMOKE</h1>
             <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
-            <div className={styles.brandBadge}>Open Daily: 10:00 AM - 2:30 AM</div>
+            <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>
 
           {/* Bento Grid */}
@@ -321,7 +321,7 @@ export default function HomePage() {
               <strong>O’Connor Smoke Cannabis</strong> is the East York walk-in dispensary at 132 O’Connor Drive, Unit B. The store serves East York, the Danforth, Woodbine, Pape-to-Coxwell side streets, and shoppers coming from the DVP and Don Mills edge.
             </p>
             <p className={styles.seoPanelText}>
-              Hours follow the Google Business Profile: 10:00 AM to 2:30 AM daily. Adults 19+ with valid government photo ID can review flower tiers and format categories on the current menu before visiting.
+              Open 24 hours daily. Adults 19+ with valid government photo ID can review flower tiers and format categories on the current menu before visiting.
             </p>
             <p className={styles.seoPanelText}>
               Call +1 (437) 780-8378 if you are coming from the Beaches or Scarborough and need one posted item. Product listings and prices can change, so the current menu is the planning source.
@@ -421,7 +421,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 Open 7 Days a Week
                 <br />
-                <span className={styles.storeHighlight}>Open Daily: 10:00 AM - 2:30 AM</span>
+                <span className={styles.storeHighlight}>Open 24 Hours</span>
               </p>
             </div>
             <div className={styles.storeCard}>

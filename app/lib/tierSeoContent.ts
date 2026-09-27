@@ -5,7 +5,7 @@ export interface TierSeoData {
   faqs: { q: string; a: string }[];
 }
 
-const visitNote = "O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. The Google Business Profile currently lists daily hours of 10:00 AM to 2:30 AM. Adults 19+ must bring valid government photo ID.";
+const visitNote = "O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York. The store is open 24 hours daily. Adults 19+ must bring valid government photo ID.";
 
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {

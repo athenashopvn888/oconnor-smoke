@@ -205,7 +205,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     banner: "/banners/04_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "🚬",
     seoTitle: "Pre-Rolls East York — Ready-to-Smoke Cannabis Joints",
     seoIntro: "Pre-rolled cannabis joints at OCONNOR SMOKE, East York. Singles, multi-packs, and infused pre-rolls — ready to light up.",
-    seoDescription: "Skip the rolling and grab a pre-roll from OCONNOR SMOKE in East York. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 132 O'Connor Dr Unit B — we are Open Daily: 10:00 AM - 2:30 AM.",
+    seoDescription: "Skip the rolling and grab a pre-roll from OCONNOR SMOKE in East York. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 132 O'Connor Dr Unit B — we are open 24 hours daily.",
     faqs: [
       { q: "What pre-rolls do you carry?", a: "We stock singles, 3-packs, and multi-packs in various strains and potencies, including infused pre-rolls with concentrates." },
       { q: "Are your pre-rolls made with quality flower?", a: "Yes! Our pre-rolls are filled with ground flower from our regular menu tiers — not shake or trim." },
@@ -236,7 +236,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
     seoTitle: "Native Cigarettes East York — Discount Tobacco at OCONNOR SMOKE",
     seoIntro: "Review the current cigarette category for O’Connor Smoke Cannabis in East York. Brand mix, package details, and posted prices can change.",
-    seoDescription: "Use the current cigarette grid to compare the listings published for the O’Connor Drive store. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York and is open daily from 10:00 AM to 2:30 AM. Adults 19+ only.",
+    seoDescription: "Use the current cigarette grid to compare the listings published for the O’Connor Drive store. O’Connor Smoke Cannabis is at 132 O’Connor Dr Unit B in East York and is open 24 hours daily. Adults 19+ only.",
     faqs: [
       { q: "Do you sell cigarettes at OCONNOR SMOKE?", a: "Yes! We carry a wide selection of native cigarette brands at competitive prices." },
       { q: "What cigarette brands do you carry?", a: "We stock a variety of premium and value native cigarette brands. Visit us to see our full in-store selection." },

@@ -28,7 +28,7 @@ export const gbpLocation = {
   mapEmbedUrl: "",
   latitude: "43.6532",
   longitude: "-79.3832",
-  hours: ["Open Daily: 10:00 AM - 2:30 AM"],
+  hours: ["Open 24 hours daily"],
   seoTitle: "East York Dispensary on O’Connor Dr | O’Connor Smoke Cannabis",
   metaDescription: "Walk-in East York cannabis store at 132 O’Connor Dr Unit B. Serving Danforth, Woodbine, and Don Mills. Call (437) 780-8378. Adults 19+.",
   localLandmarks: ["O\u2019Connor Drive", "East York", "Woodbine"],

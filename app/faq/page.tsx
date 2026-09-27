@@ -17,7 +17,7 @@ const FAQ_CATEGORIES = [
     title: "📍 Location & Hours",
     faqs: [
       { q: "Where is OCONNOR SMOKE located?", a: "We are located at 132 O'Connor Dr Unit B, East York, ON M4J 2S4." },
-      { q: "What are your hours?", a: "We are open daily from 10:00 AM to 2:30 AM. Walk in anytime — no appointment needed." },
+      { q: "What are your hours?", a: "We are open 24 hours daily. Walk in anytime — no appointment needed." },
       { q: "Is there parking nearby?", a: "Check current street signs and the map listing for parking information before visiting." },
       { q: "Which areas are near the store?", a: "The O’Connor Drive store serves East York, Danforth, Woodbine, and the Don Mills edge." },
       { q: "What's the best way to get to OCONNOR SMOKE?", a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is available on surrounding streets." },
@@ -47,7 +47,7 @@ const FAQ_CATEGORIES = [
   {
     title: "🛒 Shopping & Experience",
     faqs: [
-      { q: "Do I need an appointment?", a: "No! OCONNOR SMOKE is walk-in only. Just show up anytime — we are open daily from 10:00 AM to 2:30 AM." },
+      { q: "Do I need an appointment?", a: "No! OCONNOR SMOKE is walk-in only. Just show up anytime — we are open 24 hours daily." },
       { q: "Can I order online?", a: "Currently, OCONNOR SMOKE is an in-store shopping experience only. You can browse our live menu online to see what's in stock before visiting." },
       { q: "Do you offer delivery?", a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service." },
       { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
