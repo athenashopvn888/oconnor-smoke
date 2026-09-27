@@ -101,7 +101,7 @@ export default function DeliveryContent() {
         <div className={styles.ctaSection}>
           <p className={styles.ctaText}>
             Can&apos;t wait? Visit us in-store at <strong>132 O'Connor Dr Unit B, East York</strong> —
-            we are <strong>Open Daily: 10:00 AM - 2:30 AM</strong>. Call <strong>(437) 780-8378</strong>.
+            we are <strong>open 24 hours daily</strong>. Call <strong>(437) 780-8378</strong>.
           </p>
         </div>
       </div>

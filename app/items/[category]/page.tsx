@@ -145,7 +145,7 @@ export default async function ItemsCategoryPage({
           <div className={styles.visitCta}>
             <h3 className={styles.visitTitle}>Visit OCONNOR SMOKE</h3>
             <p className={styles.visitText}>
-              132 O'Connor Dr Unit B, East York, ON M4J 2S4 · Open Daily: 10:00 AM - 2:30 AM
+              132 O'Connor Dr Unit B, East York, ON M4J 2S4 · Open 24 hours
             </p>
           </div>
         </div>

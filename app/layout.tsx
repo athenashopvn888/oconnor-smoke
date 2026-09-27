@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | OCONNOR SMOKE",
   },
   description:
-    "OCONNOR SMOKE is a cannabis dispensary on O'Connor Dr with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 2:30 AM.",
+    "OCONNOR SMOKE is a cannabis dispensary on O'Connor Dr with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open 24 hours daily.",
   keywords: [
     "cannabis dispensary East York",
     "weed store East York",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "O’Connor Smoke Cannabis — East York",
-    description: "Walk-in East York cannabis store at 132 O'Connor Dr Unit B. Open daily 10:00 AM to 2:30 AM. Adults 19+.",
+    description: "Walk-in East York cannabis store at 132 O'Connor Dr Unit B. Open 24 hours daily. Adults 19+.",
     images: ["https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -74,7 +74,7 @@ const jsonLd = {
   "@type": "CannabisStore",
   "@id": "https://www.oconnorsmokecannabis.com/#store",
   name: "O'Connor Smoke Cannabis",
-  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in East York, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 2:30 AM.",
+  description: "Cannabis dispensary at 132 O'Connor Dr Unit B in East York, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 hours daily.",
   url: "https://www.oconnorsmokecannabis.com",
   telephone: "+14377808378",
   image: "https://oconnorsmokecannabis.com/wp-content/uploads/2026/04/7Clmh.jpg",
@@ -104,8 +104,8 @@ const jsonLd = {
       "Saturday",
       "Sunday"
     ],
-    "opens": "10:00",
-    "closes": "02:30"
+    "opens": "00:00",
+    "closes": "23:59"
   }
 ],
   areaServed: ["East York", "Danforth", "Woodbine", "Don Mills"],

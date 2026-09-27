@@ -14,7 +14,7 @@ export default function Footer() {
             <p className={styles.desc}>
               Your Local Cannabis Dispensary At 132 O'Connor Dr Unit B, East York. Visit
               OCONNOR SMOKE For Premium Flower, Edibles, Vapes &amp; More.
-              Open: Open Daily: 10:00 AM - 2:30 AM.
+              Open 24 hours daily.
             </p>
             <div className={styles.buttons}>
             </div>
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>Open Daily: 10:00 AM - 2:30 AM</span>
+              <span className={styles.highlight}>Open 24 Hours</span>
             </div>
           </div>
 

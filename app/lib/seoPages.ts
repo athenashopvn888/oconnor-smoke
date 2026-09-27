@@ -12,7 +12,7 @@ export interface SeoPageData {
 
 const commonFaqs = [
   { q: "Where is O’Connor Smoke Cannabis?", a: "132 O’Connor Dr Unit B, East York, ON M4J 2S4." },
-  { q: "What are the store hours?", a: "The Google Business Profile currently lists daily hours of 10:00 AM to 2:30 AM." },
+  { q: "What are the store hours?", a: "The store is open 24 hours daily." },
   { q: "Who can visit?", a: "The store serves adults 19+ with valid government photo ID." },
 ];
 
@@ -27,7 +27,7 @@ export const SEO_PAGES: SeoPageData[] = [
     sections: [
       { heading: "One East York Store", body: "O’Connor Smoke Cannabis is the walk-in store at 132 O’Connor Dr Unit B in East York. The location serves the O’Connor Drive, Danforth, Woodbine, Pape-to-Coxwell, and Don Mills side of the city. It is not a West End or Mississauga storefront." },
       { heading: "Check the Current Menu", body: "Flower tiers and format categories are presented on separate menu pages. Review the live menu before travelling, especially if a specific item or package size determines the trip. Posted products and prices can change." },
-      { heading: "Plan the Visit", body: "The Google Business Profile currently lists daily hours of 10:00 AM to 2:30 AM. Call (437) 780-8378 for one-item confirmation. Adults 19+ must bring valid government photo ID." },
+      { heading: "Plan the Visit", body: "The store is open 24 hours daily. Call (437) 780-8378 for one-item confirmation. Adults 19+ must bring valid government photo ID." },
     ],
     faqs: commonFaqs,
   },
