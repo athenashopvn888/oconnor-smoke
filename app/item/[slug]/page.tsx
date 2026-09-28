@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: `${item.name} | ${item.category} | OCONNOR SMOKE East York`,
     description: itemData.metaDescription,
     alternates: {
-      canonical: `https://oconnorsmokecannabis.com/item/${slug}`,
+      canonical: `https://www.oconnorsmokecannabis.com/item/${slug}`,
     },
     openGraph: {
       title: `${item.name} | OCONNOR SMOKE`,

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Cannabis Arcade Games — OCONNOR SMOKE | East York",
   description: "Play free online cannabis-themed games like Flappy Bud and Snake Munchies while you wait at OCONNOR SMOKE.",
   alternates: {
-    canonical: "https://oconnorsmokecannabis.com/games",
+    canonical: "https://www.oconnorsmokecannabis.com/games",
   },
 };
 
