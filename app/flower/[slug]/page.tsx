@@ -31,7 +31,7 @@ export async function generateMetadata({
     title: `${flower.name} | ${tierName} ${flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid"} | THC ${flower.thc} | OCONNOR SMOKE East York`,
     description: strainData.metaDescription,
     alternates: {
-      canonical: `https://oconnorsmokecannabis.com/flower/${slug}`,
+      canonical: `https://www.oconnorsmokecannabis.com/flower/${slug}`,
     },
     openGraph: {
       title: `${flower.name} | OCONNOR SMOKE`,

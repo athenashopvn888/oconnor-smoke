@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Frequently asked questions about OCONNOR SMOKE in East York. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
   alternates: {
-    canonical: "https://oconnorsmokecannabis.com/faq",
+    canonical: "https://www.oconnorsmokecannabis.com/faq",
   },
 };
 

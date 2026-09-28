@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Visit OCONNOR SMOKE at 132 O'Connor Dr Unit B, East York, ON M4J 2S4. We are open 24 hours daily. Walk-ins welcome.",
   alternates: {
-    canonical: "https://oconnorsmokecannabis.com/contact",
+    canonical: "https://www.oconnorsmokecannabis.com/contact",
   },
   openGraph: {
     title: "Contact OCONNOR SMOKE — East York Dispensary",
