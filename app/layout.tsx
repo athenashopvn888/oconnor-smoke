@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AgeGate from "./components/AgeGate";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.oconnorsmokecannabis.com"),
@@ -160,7 +159,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <AgeGate />
       </body>
     </html>
   );
