@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/delivery`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/games`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/resources`, lastModified: now, changeFrequency: "monthly", priority: 0.65 },
   ];
 
   /* Tier pages */
