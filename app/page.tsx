@@ -205,6 +205,10 @@ export default function HomePage() {
   <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineRed">CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH</span>
   <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineOrange">EXCLUSIVE SPECIAL PREMIUM GRADE BB FULL & BB LIGHT!</span>
 </div>
+<Link href="/items/cigarettes" data-belmont-mix-match-banner="" aria-label="BELMONT KING SIZE $10 - 2PACK BB $5 MIX & MATCH">
+  <span data-belmont-offer-lead="">BELMONT KING SIZE $10 -</span>
+  <span data-belmont-offer-tail=""> 2PACK BB $5 MIX &amp; MATCH</span>
+</Link>
 <Navbar />
 
       {/* -- WELCOME BANNER -- */}
