@@ -210,7 +210,6 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
 {/* -- NAVBAR -- */}
-<FleetAnnouncementBanner />
 <Navbar />
 
       {/* -- WELCOME BANNER -- */}
@@ -264,6 +263,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* -- STORE ANNOUNCEMENTS (below the title and tiers) -- */}
+      <FleetAnnouncementBanner />
 
       {/* -- EXPLORE CATEGORIES -- */}
       <section className={styles.categoriesSection} id="menu">

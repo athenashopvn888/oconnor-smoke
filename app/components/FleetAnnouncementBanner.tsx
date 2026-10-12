@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import FlowerBogoStrip from "./FlowerBogoStrip";
 import { TIER_CONFIG } from "../lib/products";
 
 export default function FleetAnnouncementBanner() {
   return (
     <aside data-fleet-homepage-announcement="" aria-label="Store announcements">
-      <FlowerBogoStrip hero />
       <Link href={`/${TIER_CONFIG.EXOTIC.slug}`} data-exotic-tier-banner="" aria-label="Shop Exotic, Premium and AAA+ flower tiers">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/banners/top-weed-tier-osc01.webp" alt="TOP WEED TIER — Exotic, Premium and AAA+ flower at OCONNOR SMOKE — Buy 2g Get 1g FREE and Buy 3g Get 3g FREE." />

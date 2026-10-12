@@ -74,7 +74,7 @@ export default function Navbar() {
           })}
         </div>
       </div>
-      {pathname !== "/" ? <FlowerBogoStrip /> : null}
+      <FlowerBogoStrip />
     </nav>
   );
 }
