@@ -14,7 +14,7 @@ export default function FleetAnnouncementBanner() {
       <p data-bb-light-deal="">EXCLUSIVE SPECIAL PREMIUM GRADE BB FULL, BB LIGHT &amp; BELMONT KING SIZE!</p>
       <Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop cigarette mix and match offers">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/banners/2pack5cig.webp" alt="Cigarette deal at OCONNOR SMOKE — 2 packs for $5 mix and match, cartons $25." />
+        <img src="/banners/2-pack-5-dollars-25-carton-cigarettes.webp" alt="Cigarette deal at OCONNOR SMOKE — 2 packs for $5 mix and match, cartons $25." />
       </Link>
       <Link href="/items/cigarettes" data-belmont-premium-banner="" aria-label="Shop BB and Belmont Premium Grade cigarettes">
         {/* eslint-disable-next-line @next/next/no-img-element */}
