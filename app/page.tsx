@@ -6,6 +6,9 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
+import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
+import { TIER_CONFIG } from "./lib/products";
+import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 
 /* -- Bento Mosaic Config -- */
@@ -176,6 +179,11 @@ export default function HomePage() {
   }, []);
 
   /* -- 2. Build Featured Strains -- */
+  const tierRangeLine = (slug: string) => {
+    const entry = Object.entries(TIER_CONFIG).find(([, config]) => config.slug === slug);
+    return entry ? tierRangeText(storeTierRange(__liveFlowers, entry[0])) : null;
+  };
+
   useEffect(() => {
     const pool = [...__liveFlowers].filter((f) => f.image);
     // Shuffle pool securely
@@ -202,14 +210,7 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
 {/* -- NAVBAR -- */}
-<div className="hermesHomepageAnnouncement" data-hermes-change="homepage-banner" role="status" aria-label="Store announcement">
-  <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineRed">CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH</span>
-  <span className="hermesHomepageAnnouncementLine hermesHomepageAnnouncementLineOrange">EXCLUSIVE SPECIAL PREMIUM GRADE BB FULL & BB LIGHT!</span>
-</div>
-<Link href="/items/cigarettes" data-belmont-mix-match-banner="" aria-label="BELMONT KING SIZE $10 - 2PACK BB $5 MIX & MATCH">
-  <span data-belmont-offer-lead="">BELMONT KING SIZE $10 -</span>
-  <span data-belmont-offer-tail=""> 2PACK BB $5 MIX &amp; MATCH</span>
-</Link>
+<FleetAnnouncementBanner />
 <Navbar />
 
       {/* -- WELCOME BANNER -- */}
@@ -256,7 +257,7 @@ export default function HomePage() {
                 <div className={styles.bentoTileOverlay} />
                 <div className={styles.bentoTileContent}>
                   <span className={styles.bentoLabel}>{tier.name}</span>
-                  <span className={styles.bentoPrice}>{tier.price}</span>
+                  <span className={styles.bentoPrice}>{tierRangeLine(tier.slug) ?? tier.price}</span>
                 </div>
               </Link>
             ))}

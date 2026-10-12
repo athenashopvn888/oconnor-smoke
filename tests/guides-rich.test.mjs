@@ -29,7 +29,7 @@ test("guide renderer uses pack prose and supported schema without offers", () =>
 });
 
 test("homepage deal strip follows BB Belmont and links to cigarettes", () => {
-  const banner = read("app/page.tsx");
+  const banner = read("app/components/FleetAnnouncementBanner.tsx");
   assert.ok(banner.indexOf("data-belmont-mix-match-banner") > banner.indexOf("CIGARETTE DEAL ! 2 PACK $5 MIX AND MATCH"));
   assert.match(banner, /aria-label="BELMONT KING SIZE \$10 - 2PACK BB \$5 MIX & MATCH"/);
   assert.match(banner, /href="\/items\/cigarettes" data-belmont-mix-match-banner/);

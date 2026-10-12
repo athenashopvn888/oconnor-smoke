@@ -85,5 +85,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.65,
   }));
 
-  return [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...guidePages];
+  const entries = [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...guidePages];
+  const seen = new Set<string>();
+  return entries.filter((entry) => (seen.has(entry.url) ? false : (seen.add(entry.url), true)));
 }
