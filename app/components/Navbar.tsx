@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import FlowerBogoStrip from "./FlowerBogoStrip";
 
 const ALL_LINKS = [
   { href: "/exotic", label: "Exotic" },
@@ -73,6 +74,7 @@ export default function Navbar() {
           })}
         </div>
       </div>
+      {pathname !== "/" ? <FlowerBogoStrip /> : null}
     </nav>
   );
 }
