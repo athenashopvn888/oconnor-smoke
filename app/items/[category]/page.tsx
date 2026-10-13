@@ -4,7 +4,6 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
-import CategoryCoreBanners from "../../components/CategoryCoreBanners";
 import Footer from "../../components/Footer";
 import SafeImage from "../../components/SafeImage";
 import {
@@ -65,7 +64,6 @@ export default async function ItemsCategoryPage({
     items = [...items, ...uniqueAccessories];
   }
   const { config } = catInfo;
-  const coreKind = catSlug === "cigarettes" ? "cigarettes" : (catSlug === "vapes" || catSlug === "vape-disposables") ? "vapes" : null;
   const guideGroups = getCategoryGuideGroups(`/items/${config.slug}`);
   const seoKey = config.name.toLowerCase().includes("thc") ? "vape-disposables" : config.name.toLowerCase().includes("nic") ? "vapes" : catSlug;
   const seoCopy = seoContent.categories[seoKey as keyof typeof seoContent.categories];
@@ -82,11 +80,10 @@ export default async function ItemsCategoryPage({
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
-      {coreKind && <CategoryCoreBanners kind={coreKind} storeName="O'Connor Smoke Cannabis" weedHref="/exotic" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
-        {config.banner && bannerExists && !coreKind ? (
+        {config.banner && bannerExists ? (
           <img
             src={config.banner}
             alt={config.name}
