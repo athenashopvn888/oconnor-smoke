@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
-import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
+import FourCoreBannerStack from "./components/FourCoreBannerStack";
 import { TIER_CONFIG } from "./lib/products";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 import { useLiveFlowers } from "./lib/useLiveMenu";
@@ -210,8 +210,8 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
 {/* -- NAVBAR -- */}
-<FleetAnnouncementBanner />
 <Navbar />
+<FourCoreBannerStack title="OCONNOR SMOKE" storeName="O'Connor Smoke Cannabis" storeArea="East York" storeOrigin="https://www.oconnorsmokecannabis.com" weedHref="/exotic" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
 
       {/* -- WELCOME BANNER -- */}
       {hasWelcomeBanner && !welcomeBannerError && (
@@ -237,7 +237,7 @@ export default function HomePage() {
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <img src="/storeFavicon.webp" alt="OCONNOR SMOKE Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
-            <h1 className={styles.brandTitle}>OCONNOR SMOKE</h1>
+            <div className={styles.brandTitle}>OCONNOR SMOKE</div>
             <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
           </div>
