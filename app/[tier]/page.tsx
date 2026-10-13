@@ -4,6 +4,7 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import Navbar from "../components/Navbar";
+import CategoryCoreBanners from "../components/CategoryCoreBanners";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
 import {
@@ -65,6 +66,7 @@ export default async function TierPage({
 
   const flowers = (await liveFlowersByTier(tierInfo.key));
   const { config } = tierInfo;
+  const isCoreWeedTier = ["exotic", "premium", "aaa"].includes(tierSlug);
   const seo = TIER_SEO[tierInfo.key];
   const flowerCopy = seoContent.flowerTiers;
   const tierLinks = Object.values(TIER_CONFIG);
@@ -92,9 +94,10 @@ export default async function TierPage({
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tierJsonLd) }} />
     <main className={styles.main}>
       <Navbar />
+      {isCoreWeedTier && <CategoryCoreBanners kind="weed" storeName="O'Connor Smoke Cannabis" weedHref="/exotic" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
       {/* ── Banner Image (standalone, no overlay text) ── */}
-      {bannerExists && (
+      {bannerExists && !isCoreWeedTier && (
         <section className={styles.bannerSection}>
           <img
             src={config.banner}
@@ -202,7 +205,7 @@ export default async function TierPage({
             ))}
 
             <div className={styles.seoBlock}>
-              <h3 className={styles.seoHeading}>{config.name} at O'Connor Smoke Cannabis</h3>
+              <h3 className={styles.seoHeading}>{config.name} at O&apos;Connor Smoke Cannabis</h3>
               {flowerCopy.paragraphs.map((paragraph) => <p key={paragraph} className={styles.seoBody}>{paragraph}</p>)}
               <p className={styles.seoBody}>{flowerCopy.links.map((label, index) => {
                 const destination = tierLinks[index]?.slug || tierSlug;
