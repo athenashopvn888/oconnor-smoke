@@ -211,7 +211,7 @@ export default function HomePage() {
     <main className={styles.main}>
 {/* -- NAVBAR -- */}
 <Navbar />
-<FourCoreBannerStack title="OCONNOR SMOKE" storeName="O'Connor Smoke Cannabis" storeArea="East York" storeOrigin="https://www.oconnorsmokecannabis.com" weedHref="/exotic" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
+<FourCoreBannerStack title="OCONNOR SMOKE Cannabis Dispensary - Weed Delivery on O'Connor Dr, East York" storeName="O'Connor Smoke Cannabis" storeArea="East York" storeOrigin="https://www.oconnorsmokecannabis.com" weedHref="/exotic" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
 
       {/* -- WELCOME BANNER -- */}
       {hasWelcomeBanner && !welcomeBannerError && (
