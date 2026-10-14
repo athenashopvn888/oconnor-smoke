@@ -20,6 +20,7 @@ import guideStyles from "../guides/[slug]/guide.module.css";
 import { liveFlowersByTier } from "../lib/liveMenu";
 import { formatAsLowAsAfterPromos, formatPerGram, isBogoDeal, type BoardDeal } from "../lib/flowerDeals";
 import { storeTierRange, tierRangeText } from "../lib/tierPriceRanges";
+import nearMeFaq from "../lib/nearMeFaq.json";
 
 // Read the live menu feed on every request (never a build-time snapshot).
 export const dynamic = "force-dynamic";
@@ -196,6 +197,7 @@ export default async function TierPage({
           <div className={styles.container}>
             <h2 className={styles.seoMainTitle}>{seo.seoTitle}</h2>
             <p className={styles.seoIntro}>{seo.seoIntro}</p>
+            {/^(exotic|premium|aaa)(-weed)?$/.test(tierSlug) ? <p className={styles.seoIntro} data-tier-near-line="">{nearMeFaq.tierLine}</p> : null}
 
             {seo.sections.map((s, i) => (
               <div key={i} className={styles.seoBlock}>
