@@ -37,6 +37,8 @@ const FAQ_CATEGORIES = [
   {
     title: "💰 Pricing & Bundle Offers",
     faqs: [
+      { id: "delivery-price-rule", q: "Why are delivery prices different from in-store prices?", a: "Store and delivery are two separate menus. Delivery uses bulk pricing: larger packages, starting at 7 grams, with a minimum order, so the price is set for bigger orders brought to your door. In-store prices and deals, like Buy 2g Get 1g FREE, are for smaller amounts you pick up in person, and they don't apply to delivery. If you only want a small amount or want it right now, our store on O'Connor Drive is the fastest way to get it." },
+      { id: "store-price-on-delivery", q: "Can I get the store price on a delivery order?", a: "No. Delivery orders always use delivery prices, and store prices only apply to in-store purchases. See the answer above for why." },
       { q: "What is the cheapest weed you sell?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. These are the most competitive prices you'll find in East York." },
       { q: "What bundle pricing do you offer?", a: "Flower bundle pricing includes a 3g total option — the 3g total is shown clearly before purchase. Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing, with 6g total pricing." },
       { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. Check the AA, AAA+ and Budget tier pages for what is on the shelf today." },
@@ -48,8 +50,8 @@ const FAQ_CATEGORIES = [
     title: "🛒 Shopping & Experience",
     faqs: [
       { q: "Do I need an appointment?", a: "No! OCONNOR SMOKE is walk-in only. Just show up anytime — we are open 24 hours daily." },
-      { q: "Can I order online?", a: "Currently, OCONNOR SMOKE is an in-store shopping experience only. You can browse our live menu online to see what's in stock before visiting." },
-      { q: "Do you offer delivery?", a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service." },
+      { q: "Can I order online?", a: "Yes. Browse the delivery menu, then use LIVE ORDER to contact the O'Connor dispatcher." },
+      { q: "Do you offer delivery?", a: "Yes. The delivery page shows the current delivery menu, minimum and fee." },
       { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
       { q: "Can your staff help me choose a strain?", a: "Absolutely! Our knowledgeable budtenders are here to help. Whether you're a first-time buyer or a seasoned connoisseur, we can recommend strains based on your preferences, desired effects, and budget." },
       { q: "Is there a minimum purchase?", a: "No minimum purchase required. You can buy as little as 1 gram." },
@@ -95,14 +97,14 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about OCONNOR SMOKE — East York&apos;s premium dispensary at 132 O'Connor Dr Unit B in East York.
+            Everything you need to know about OCONNOR SMOKE — East York&apos;s premium dispensary at 132 O&apos;Connor Dr Unit B in East York.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
             <div key={cat.title} className={styles.category}>
               <h2 className={styles.categoryTitle}>{cat.title}</h2>
               {cat.faqs.map((faq) => (
-                <details key={faq.q} className={styles.faqItem}>
+                <details key={faq.q} id={faq.id} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.q}</summary>
                   <p className={styles.faqAnswer}>{faq.a}</p>
                 </details>
@@ -113,7 +115,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(437) 780-8378</strong> or visit us at 132 O'Connor Dr Unit B, East York.
+              Call us at <strong>(437) 780-8378</strong> or visit us at 132 O&apos;Connor Dr Unit B, East York.
             </p>
           </div>
         </div>

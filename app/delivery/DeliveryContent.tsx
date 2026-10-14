@@ -1,110 +1,43 @@
-"use client";
-
-import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WebChat from "./WebChat";
+import DeliveryCatalog, { type Product, type StoreInfo } from "./DeliveryCatalog";
 import styles from "./delivery.module.css";
 
-export default function DeliveryContent() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+const API = "https://milestone-1-demo.vercel.app";
+const SITE = "https://www.oconnorsmokecannabis.com";
+const STORE: StoreInfo = {"name": "O'Connor Smoke", "shortName": "O'Connor", "eyebrow": "O'CONNOR SMOKE \u00b7 EAST YORK", "area": "East York, Toronto", "address": "132 O'Connor Dr Unit B, East York", "phone": "(437) 780-8378", "phoneHref": "tel:+14377808378", "storeHours": "24 hours a day", "sodCode": "OSC01"};
+const FAQS = [
+  { id: "delivery-minimum", q: "What is the delivery minimum and fee?", a: "Delivery has a $60 product minimum before the $10 delivery fee. Delivery starts at 7g." },
+  { id: "delivery-how", q: "How do I order?", a: "Browse the delivery menu, open LIVE ORDER and send the dispatcher your choices. New customers complete a private ID check in chat, then the dispatcher confirms stock, your address and the total." },
+  { id: "delivery-id", q: "Do I need ID?", a: "Yes. Photo ID showing you are 19+ is checked at the door." },
+  { id: "delivery-price-rule", q: "Why are delivery prices different from in-store prices?", a: "Store and delivery are two separate menus. Delivery uses bulk pricing: larger packages, starting at 7 grams, with a minimum order, so the price per gram is set for bigger orders brought to your door. In-store prices and deals, like Buy 2g Get 1g FREE, are for smaller amounts you pick up in person, and they don't apply to delivery. If you only want a small amount or want it right now, our store on O'Connor Drive is the fastest way to get it." },
+  { id: "store-price-on-delivery", q: "Can I get the store price on a delivery order?", a: "No. Delivery orders always use delivery prices, and store prices only apply to in-store purchases. See the answer above for why." },
+];
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setStatus("loading");
-
-    try {
-      // Save to Google Sheets via Apps Script
-      const res = await fetch(
-        `https://script.google.com/macros/s/AKfycbySrZYxI-NNnXfxY1jXOqHgT2HQi4zst2Fgte6FXTeymat_W_r0o1E3P83EfnVCjEk0/exec?action=delivery_email&email=${encodeURIComponent(email)}&store=OSC01`,
-        { method: "GET", mode: "no-cors" }
-      );
-      setStatus("success");
-      setEmail("");
-    } catch {
-      setStatus("success"); // no-cors always succeeds visually
-    }
+async function getCatalog(): Promise<Product[]> {
+  try {
+    const response = await fetch(`${API}/api/catalog?store=OSC01`, { cache: "no-store", signal: AbortSignal.timeout(20000) });
+    if (!response.ok) return [];
+    const payload = await response.json();
+    return Array.isArray(payload.products) ? payload.products.filter((item: Product) => item.publicProductId && item.tier && Array.isArray(item.images) && Array.isArray(item.priceOptions)) : [];
+  } catch {
+    return [];
   }
+}
 
+export default async function DeliveryContent() {
+  const products = await getCatalog();
+  const schema = [
+    { "@context": "https://schema.org", "@type": "Service", name: "O'Connor Smoke weed delivery", serviceType: "Cannabis delivery", provider: { "@type": "Store", name: "OCONNOR SMOKE", telephone: "+14377808378", url: SITE }, areaServed: "East York, Toronto" },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) },
+  ];
   return (
     <main className={styles.main}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
       <Navbar />
-      <div className={styles.content}>
-        <h1 className={styles.pageTitle}>
-          Delivery <span className={styles.highlight}>Coming Soon</span>
-        </h1>
-        <p className={styles.pageSubtitle}>
-          OCONNOR SMOKE is launching delivery across East York.
-          Sign up below to be the first to know when we go live — and get an exclusive launch-day deal.
-        </p>
-
-        {/* Email signup */}
-        <div className={styles.formSection}>
-          <h2 className={styles.formTitle}>🔔 Get Notified When We Launch</h2>
-          <p className={styles.formDesc}>
-            Enter your email to join our delivery waitlist. We&apos;ll send you one email when delivery goes live.
-          </p>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.inputRow}>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className={styles.emailInput}
-                required
-                disabled={status === "loading"}
-              />
-              <button
-                type="submit"
-                className={styles.submitBtn}
-                disabled={status === "loading"}
-              >
-                {status === "loading" ? "Sending..." : "Notify Me"}
-              </button>
-            </div>
-          </form>
-          {status === "success" && (
-            <p className={styles.successMsg}>
-              ✅ You&apos;re on the list! We&apos;ll notify you when delivery launches.
-            </p>
-          )}
-          {status === "error" && (
-            <p className={styles.errorMsg}>
-              Something went wrong. Please try again.
-            </p>
-          )}
-        </div>
-
-        {/* Info cards */}
-        <div className={styles.infoGrid}>
-          <div className={styles.infoCard}>
-            <span className={styles.infoIcon}>📦</span>
-            <h3 className={styles.infoTitle}>Delivery Details</h3>
-            <p className={styles.infoDesc}>Contact the store to confirm current delivery timing and availability.</p>
-          </div>
-          <div className={styles.infoCard}>
-            <span className={styles.infoIcon}>🌉</span>
-            <h3 className={styles.infoTitle}>Serving Toronto</h3>
-            <p className={styles.infoDesc}>Ask the store whether delivery is available for your address.</p>
-          </div>
-          <div className={styles.infoCard}>
-            <span className={styles.infoIcon}>💰</span>
-            <h3 className={styles.infoTitle}>Before You Order</h3>
-            <p className={styles.infoDesc}>Confirm delivery details with the store before placing your order.</p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className={styles.ctaSection}>
-          <p className={styles.ctaText}>
-            Can&apos;t wait? Visit us in-store at <strong>132 O'Connor Dr Unit B, East York</strong> —
-            we are <strong>open 24 hours daily</strong>. Call <strong>(437) 780-8378</strong>.
-          </p>
-        </div>
-      </div>
+      <DeliveryCatalog products={products} store={STORE} faqs={FAQS} />
+      <WebChat />
       <Footer />
     </main>
   );

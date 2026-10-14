@@ -12,7 +12,7 @@ export default function Footer() {
               OCONNOR SMOKE
             </div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 132 O'Connor Dr Unit B, East York. Visit
+              Your Local Cannabis Dispensary At 132 O&apos;Connor Dr Unit B, East York. Visit
               OCONNOR SMOKE For Premium Flower, Edibles, Vapes &amp; More.
               Open 24 hours daily.
             </p>
@@ -25,7 +25,7 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address:</span>
-              <span>132 O'Connor Dr Unit B</span>
+              <span>132 O&apos;Connor Dr Unit B</span>
               <span>East York, ON M4J 2S4</span>
               <span>Canada</span>
             </div>
@@ -57,7 +57,7 @@ export default function Footer() {
               <Link href="/visit">Visit &amp; Directions</Link>
               <Link href="/resources">Resources</Link>
               <Link href="/guides">Guides</Link>
-              <Link href="/delivery">Delivery (Coming Soon)</Link>
+              <Link href="/delivery">Delivery</Link>
               <Link href="/games">Games Arcade</Link>
               <Link href="/info/york-weed-dispensary">East York Dispensary</Link>
               <Link href="/info/cheap-weed-york">Cheap Weed East York</Link>

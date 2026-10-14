@@ -265,6 +265,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* -- STORE ANNOUNCEMENTS (below the title and tiers) -- */}
+      <FleetAnnouncementBanner />
+
       {/* -- EXPLORE CATEGORIES -- */}
       <section className={styles.categoriesSection} id="menu">
         <div className={styles.container}>

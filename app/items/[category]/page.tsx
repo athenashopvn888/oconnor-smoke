@@ -89,7 +89,7 @@ export default async function ItemsCategoryPage({
         {config.banner && bannerExists && !coreKind ? (
           <img
             src={config.banner}
-            alt={config.name}
+            alt={config.banner.includes("2-pack-5-dollars-25-carton") ? "Cigarettes: 2 packs for $5 mix and match, $25 carton of Canadian Classics, Canadian Goose, Rolled Gold and BB" : config.name}
             style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
           />
         ) : (
