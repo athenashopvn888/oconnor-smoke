@@ -1,7 +1,8 @@
+import { cigaretteSafeContent } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = cigaretteSafeContent({
   metadataBase: new URL("https://www.oconnorsmokecannabis.com"),
   title: {
     default: "OCONNOR SMOKE | O'Connor Dr Dispensary",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   verification: {
     // google: "your-google-verification-code",
   },
-};
+});
 
 /* ── JSON-LD Structured Data ── */
 const jsonLd = {
@@ -139,11 +140,11 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cigaretteSafeContent(jsonLd)) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cigaretteSafeContent(websiteJsonLd)) }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYMC137Q0V"></script>
         <script

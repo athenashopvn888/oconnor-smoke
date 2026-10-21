@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES, cigaretteSafeContent, isCigarettePath } from "./siteConfig";
 export interface SeoPageData {
   slug: string;
   title: string;
@@ -16,7 +17,7 @@ const commonFaqs = [
   { q: "Who can visit?", a: "The store serves adults 19+ with valid government photo ID." },
 ];
 
-export const SEO_PAGES: SeoPageData[] = [
+const SEO_PAGES_RAW: SeoPageData[] = [
   {
     slug: "york-weed-dispensary",
     title: "East York Weed Dispensary | O’Connor Smoke Cannabis",
@@ -84,6 +85,12 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: commonFaqs,
   },
 ];
+
+export const SEO_PAGES = SHOW_CIGARETTES
+  ? SEO_PAGES_RAW
+  : SEO_PAGES_RAW
+      .filter((page) => !isCigarettePath(page.slug))
+      .map((page) => cigaretteSafeContent(page));
 
 export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
   return SEO_PAGES.find((page) => page.slug === slug);

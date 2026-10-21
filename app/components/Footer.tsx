@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
@@ -50,7 +51,7 @@ export default function Footer() {
               <Link href="/aa">AA Flower</Link>
               <Link href="/budget">Budget Flower</Link>
               <Link href="/items/edibles">Edibles</Link>
-              <Link href="/items/cigarettes">Cigarettes</Link>
+              {SHOW_CIGARETTES ? (<Link href="/items/cigarettes">Cigarettes</Link>) : null}
               <Link href="/items/vapes">Vape Pens</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/hours">Store Hours</Link>
@@ -61,7 +62,7 @@ export default function Footer() {
               <Link href="/games">Games Arcade</Link>
               <Link href="/info/york-weed-dispensary">East York Dispensary</Link>
               <Link href="/info/cheap-weed-york">Cheap Weed East York</Link>
-              <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
+              {SHOW_CIGARETTES ? (<Link href="/info/native-cigarettes-york">Native Cigarettes</Link>) : null}
               <Link href="/weed-delivery-east-york">East York Delivery</Link>
               <Link href="/weed-delivery-scarborough">Scarborough Delivery</Link>
               <Link href="/weed-dispensary-east-york">East York Walk-In Store</Link>

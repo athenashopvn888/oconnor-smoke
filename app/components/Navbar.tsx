@@ -1,11 +1,14 @@
 "use client";
 
+import { filterCigaretteEntries } from "../lib/siteConfig";
+
+
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import FlowerBogoStrip from "./FlowerBogoStrip";
 
-const ALL_LINKS = [
+const ALL_LINKS_RAW = [
   { href: "/exotic", label: "Exotic" },
   { href: "/premium", label: "Premium" },
   { href: "/aaa", label: "AAA+" },
@@ -25,6 +28,8 @@ const ALL_LINKS = [
   { href: "/guides", label: "Guides" },
   { href: "/games", label: "🎮" },
 ];
+
+const ALL_LINKS = filterCigaretteEntries(ALL_LINKS_RAW);
 
 export default function Navbar() {
   const pathname = usePathname();

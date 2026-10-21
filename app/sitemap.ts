@@ -1,3 +1,7 @@
+import { SHOW_CIGARETTES, isCigarettePath } from "./lib/siteConfig";
+const withoutCigaretteUrls = (entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap =>
+  SHOW_CIGARETTES ? entries : entries.filter((entry) => !isCigarettePath(new URL(entry.url).pathname));
+
 import { getLiveMenu } from "./lib/liveMenu";
 import type { MetadataRoute } from "next";
 import { TIER_CONFIG, CATEGORY_CONFIG } from "./lib/products";
@@ -87,5 +91,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const entries = [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...guidePages];
   const seen = new Set<string>();
-  return entries.filter((entry) => (seen.has(entry.url) ? false : (seen.add(entry.url), true)));
+  return withoutCigaretteUrls(entries.filter((entry) => (seen.has(entry.url) ? false : (seen.add(entry.url), true))));
 }
