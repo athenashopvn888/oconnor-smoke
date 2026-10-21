@@ -1,5 +1,8 @@
 "use client";
 
+import { cigaretteSafeContent } from "./lib/siteConfig";
+
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -58,7 +61,7 @@ const BENTO_TIERS = [
 ];
 
 /* -- Explore Categories Config (New Banners) -- */
-const EXPLORE_CATEGORIES = [
+const EXPLORE_CATEGORIES = cigaretteSafeContent([
   { name: "Vape Pens", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp" },
   { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp" },
@@ -67,7 +70,7 @@ const EXPLORE_CATEGORIES = [
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/06_Cigarettes.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
   { name: "Games Arcade", slug: "games", banner: "/banners/10_Games.webp" },
-];
+]);
 
 /* -- Local FAQs for O'Connor Drive -- */
 const LOCAL_FAQS = [
