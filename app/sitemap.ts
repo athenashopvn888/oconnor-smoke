@@ -1,4 +1,5 @@
 import { SHOW_CIGARETTES, isCigarettePath } from "./lib/siteConfig";
+import { loadFleetArticles } from "./lib/fleet/articles";
 const withoutCigaretteUrls = (entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap =>
   SHOW_CIGARETTES ? entries : entries.filter((entry) => !isCigarettePath(new URL(entry.url).pathname));
 
@@ -89,7 +90,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.65,
   }));
 
-  const entries = [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...guidePages];
+  let fleetArticlePages: MetadataRoute.Sitemap = [];
+  try {
+    const loaded = await loadFleetArticles();
+    if (loaded.ok) {
+      const codedSlugs = new Set(["resources", "guides", ...GUIDE_REGISTRY.map((guide) => guide.slug)]);
+      fleetArticlePages = loaded.articles.filter((article) => !codedSlugs.has(article.slug)).map((article) => ({
+        url: `${BASE}/articles/${article.slug}`,
+        lastModified: article.publishedAt,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
+    }
+  } catch {
+    fleetArticlePages = [];
+  }
+
+  const entries = [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...guidePages, ...fleetArticlePages];
   const seen = new Set<string>();
   return withoutCigaretteUrls(entries.filter((entry) => (seen.has(entry.url) ? false : (seen.add(entry.url), true))));
 }
