@@ -1,8 +1,12 @@
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import { cigaretteSafeContent, SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import "./globals.css";
+import CigaretteStateProvider, { CIG_WORDING } from "./components/CigaretteStateProvider";
+import FleetContentProvider from "./components/fleet/FleetContentProvider";
+import { getFleetContent } from "./lib/fleetContent";
+import type { FleetState } from "./lib/fleet/types";
 
-export const metadata: Metadata = cigaretteSafeContent({
+const ROOT_METADATA: Metadata = cigaretteSafeContent({
   metadataBase: new URL("https://www.oconnorsmokecannabis.com"),
   title: {
     default: "OCONNOR SMOKE | O'Connor Dr Dispensary",
@@ -68,6 +72,19 @@ export const metadata: Metadata = cigaretteSafeContent({
   },
 });
 
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return ROOT_METADATA;
+  const description = fleet.pages.Home?.metaDescription || "";
+  if (!description || description === ROOT_METADATA.description) return ROOT_METADATA;
+  return {
+    ...ROOT_METADATA,
+    description,
+    openGraph: { ...ROOT_METADATA.openGraph, description },
+    twitter: { ...ROOT_METADATA.twitter, description },
+  };
+}
+
 /* ── JSON-LD Structured Data ── */
 const jsonLd = {
   "@context": "https://schema.org",
@@ -111,6 +128,32 @@ const jsonLd = {
   areaServed: ["East York", "Danforth", "Woodbine", "Don Mills"],
 };
 
+function fleetJsonLd(base: typeof jsonLd, fleet: FleetState) {
+  if (!fleet.active) return base;
+  const nap = fleet.nap;
+  const same = nap.schemaName === base.name
+    && nap.phoneTel === base.telephone
+    && nap.street === base.address.streetAddress
+    && nap.city === base.address.addressLocality
+    && nap.province === base.address.addressRegion
+    && nap.postalCode === base.address.postalCode
+    && nap.website === base.url;
+  if (same) return base;
+  return {
+    ...base,
+    name: nap.schemaName,
+    telephone: nap.phoneTel,
+    url: nap.website,
+    address: {
+      ...base.address,
+      streetAddress: nap.street,
+      addressLocality: nap.city,
+      addressRegion: nap.province,
+      postalCode: nap.postalCode,
+    },
+  };
+}
+
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -120,14 +163,17 @@ const websiteJsonLd = {
   publisher: { "@id": "https://www.oconnorsmokecannabis.com/#store" },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const fleet = await getFleetContent();
+  const storeJsonLd = fleetJsonLd(jsonLd, fleet);
   return (
     <html lang="en">
       <head>
+        <meta name="fleet-content-version" content={fleet.version} />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="East York" />
         <meta name="geo.position" content="43.6532;-79.3832" />
@@ -140,7 +186,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(cigaretteSafeContent(jsonLd)) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(cigaretteSafeContent(storeJsonLd)) }}
         />
         <script
           type="application/ld+json"
@@ -159,7 +205,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
+          <CigaretteStateProvider value={{ web: SHOW_CIGARETTES, tv: SHOW_CIGARETTES, wording: CIG_WORDING }}>
+            {children}
+          </CigaretteStateProvider>
+        </FleetContentProvider>
       </body>
     </html>
   );
