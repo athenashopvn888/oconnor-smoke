@@ -7,6 +7,7 @@ const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
   getTvData,
+  getCigaretteDataset,
   postprocessFlowers,
   postprocessItems,
   resetTvStockCache,
@@ -278,6 +279,50 @@ test("HTTP 200 HTML, 429, and throws serve last-good with reason and cooldown", 
     await getTvData({ type: "flowers", staticFlowers, staticItems, fetchImpl: failure.fetchImpl, now });
     assert.equal(failure.calls.length, 2);
   }
+});
+
+test("cigarette dataset keeps the feed cig block and refreshes about every 60s", async () => {
+  const flowers = list(staticFlowers.length, (index) => flower(`F${index}`));
+  const items = list(staticItems.length, (index) => item(`I${index}`, "$10"));
+  const cigOn = { on: true, webOn: false, tvOn: true, master: true };
+  const first = mockFetch({ flowers, items, stockDate: "2026-10-23T03:25:29.000Z", cig: cigOn });
+  const dataset = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: first.fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(dataset.source, "live");
+  assert.equal(dataset.cig.tvOn, true);
+  assert.equal(dataset.cig.webOn, false);
+  assert.equal(dataset.cig.master, true);
+  assert.equal(first.calls.length, 1);
+  assert.equal(first.calls[0].opts.cache, "no-store");
+
+  const cached = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: first.fetchImpl,
+    now: 5_000 + 30_000,
+  });
+  assert.equal(cached.cig.tvOn, true);
+  assert.equal(first.calls.length, 1);
+
+  const later = mockFetch({
+    flowers,
+    items,
+    stockDate: "2026-10-23T12:00:00.000Z",
+    cig: { ...cigOn, tvOn: false },
+  });
+  const refreshed = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: later.fetchImpl,
+    now: 5_000 + 61_000,
+  });
+  assert.equal(later.calls.length, 1);
+  assert.equal(refreshed.cig.tvOn, false);
+  assert.equal(refreshed.source, "live");
 });
 
 test("prebuild uses the shared post-processor", () => {
