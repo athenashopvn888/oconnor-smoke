@@ -1,8 +1,9 @@
 import { cigaretteSafeContent, SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import "./globals.css";
-import CigaretteStateProvider, { CIG_WORDING } from "./components/CigaretteStateProvider";
+import CigaretteStateProvider from "./components/CigaretteStateProvider";
 import FleetContentProvider from "./components/fleet/FleetContentProvider";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
 import { getFleetContent } from "./lib/fleetContent";
 import type { FleetState } from "./lib/fleet/types";
 
@@ -168,7 +169,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fleet = await getFleetContent();
+  const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
+  const published = toPublicCigaretteState(cigaretteSnapshot);
+  // Website copy stays on the static switch and webOn. TV follows the feed flag only.
+  const cigarettes = { web: SHOW_CIGARETTES && published.web, tv: published.tv, wording: published.wording };
   const storeJsonLd = fleetJsonLd(jsonLd, fleet);
   return (
     <html lang="en">
@@ -206,7 +210,7 @@ export default async function RootLayout({
       </head>
       <body>
         <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
-          <CigaretteStateProvider value={{ web: SHOW_CIGARETTES, tv: SHOW_CIGARETTES, wording: CIG_WORDING }}>
+          <CigaretteStateProvider value={cigarettes}>
             {children}
           </CigaretteStateProvider>
         </FleetContentProvider>
