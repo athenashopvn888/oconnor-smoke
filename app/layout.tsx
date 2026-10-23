@@ -171,8 +171,8 @@ export default async function RootLayout({
 }>) {
   const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
   const published = toPublicCigaretteState(cigaretteSnapshot);
-  // Website copy stays on the static switch and webOn. TV follows the feed flag only.
-  const cigarettes = { web: SHOW_CIGARETTES && published.web, tv: published.tv, wording: published.wording };
+  // Website surfaces follow SHOW_CIGARETTES ? feed.web : false. TV follows the feed flag only.
+  const cigarettes = { web: SHOW_CIGARETTES ? published.web : false, tv: published.tv, wording: published.wording };
   const storeJsonLd = fleetJsonLd(jsonLd, fleet);
   return (
     <html lang="en">
