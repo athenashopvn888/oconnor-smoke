@@ -2,6 +2,7 @@ import { cigaretteSafeContent, SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Metadata } from "next";
 import "./globals.css";
 import CigaretteStateProvider from "./components/CigaretteStateProvider";
+import MobileBottomBar from "./components/MobileBottomBar";
 import FleetContentProvider from "./components/fleet/FleetContentProvider";
 import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
 import { getFleetContent } from "./lib/fleetContent";
@@ -212,6 +213,7 @@ export default async function RootLayout({
         <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
           <CigaretteStateProvider value={cigarettes}>
             {children}
+            <MobileBottomBar />
           </CigaretteStateProvider>
         </FleetContentProvider>
       </body>
