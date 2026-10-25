@@ -1,6 +1,6 @@
-import { gbpLocation } from "./gbp-location";
+import { gbpLocation } from "./gbp-location.ts";
 
-type OpeningHours = {
+export type OpeningHours = {
   dayOfWeek: readonly string[];
   opens: string;
   closes: string;
@@ -20,7 +20,7 @@ const WEEKDAYS = [
  * Structured hours copied from the Store JSON-LD `openingHoursSpecification`
  * in app/layout.tsx. Display strings come from app/lib/gbp-location.ts.
  */
-const OPENING_HOURS: readonly OpeningHours[] = [
+export const OPENING_HOURS: readonly OpeningHours[] = [
   {
     dayOfWeek: WEEKDAYS,
     opens: "00:00",
