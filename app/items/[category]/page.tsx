@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "../../lib/cigaretteFeed";
 import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
@@ -34,6 +35,7 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category: catSlug } = await params;
+  if (catSlug === "cigarettes" && !toPublicCigaretteState(await getCigaretteSnapshot()).web) redirect("/items/vapes");
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) return {};
   const items = (await liveItemsByCategory(catInfo.key));
@@ -53,6 +55,7 @@ export default async function ItemsCategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category: catSlug } = await params;
+  if (catSlug === "cigarettes" && !toPublicCigaretteState(await getCigaretteSnapshot()).web) redirect("/items/vapes");
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) notFound();
 

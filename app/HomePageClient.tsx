@@ -1,6 +1,7 @@
 "use client";
 
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import { cigaretteSafeContent, isCigaretteEntry } from "./lib/siteConfig";
+import { useCigaretteState } from "./components/CigaretteStateProvider";
 
 
 import { useEffect, useState } from "react";
@@ -106,6 +107,7 @@ interface ReviewStats {
 }
 
 export default function HomePage({ contentBanners }: { contentBanners?: ResolvedBanner[] }) {
+  const showCigarettes = useCigaretteState().web;
     const __liveFlowers = useLiveFlowers();
   const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -276,12 +278,12 @@ export default function HomePage({ contentBanners }: { contentBanners?: Resolved
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              From custom disposable vapes and concentrates to accessories and cigarettes.
+              From custom disposable vapes and concentrates to accessories{showCigarettes ? " and cigarettes" : ""}.
             </p>
           </div>
 
           <div className={styles.categoriesGrid}>
-            {EXPLORE_CATEGORIES.map((cat) => (
+            {EXPLORE_CATEGORIES.filter((category) => showCigarettes || !isCigaretteEntry(category)).map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}

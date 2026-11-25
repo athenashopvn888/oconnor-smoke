@@ -1,6 +1,7 @@
 "use client";
 
-import { filterCigaretteEntries } from "../lib/siteConfig";
+import { filterCigaretteEntries, isCigaretteEntry } from "../lib/siteConfig";
+import { useCigaretteState } from "./CigaretteStateProvider";
 
 
 import { usePathname } from "next/navigation";
@@ -32,6 +33,7 @@ const ALL_LINKS_RAW = [
 const ALL_LINKS = filterCigaretteEntries(ALL_LINKS_RAW);
 
 export default function Navbar() {
+  const showCigarettes = useCigaretteState().web;
   const pathname = usePathname();
 
   return (
@@ -65,7 +67,7 @@ export default function Navbar() {
       {/* Scrollable link bar */}
       <div className={styles.scrollBar}>
         <div className={styles.scrollInner}>
-          {ALL_LINKS.map((link) => {
+          {ALL_LINKS.filter((link) => showCigarettes || !isCigaretteEntry(link)).map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
