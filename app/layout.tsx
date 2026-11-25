@@ -108,8 +108,8 @@ const jsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 43.6532,
-    longitude: -79.3832,
+    latitude: 43.6934569,
+    longitude: -79.3500242,
   },
   openingHoursSpecification: [
   {
@@ -181,8 +181,8 @@ export default async function RootLayout({
         <meta name="fleet-content-version" content={fleet.version} />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="East York" />
-        <meta name="geo.position" content="43.6532;-79.3832" />
-        <meta name="ICBM" content="43.6532, -79.3832" />
+        <meta name="geo.position" content="43.6934569;-79.3500242" />
+        <meta name="ICBM" content="43.6934569, -79.3500242" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
